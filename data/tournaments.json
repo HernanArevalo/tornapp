@@ -1,6 +1,6 @@
 {
-    "0":{
-        "name":"Uefa",
+    "abc":{
+        "name":"Liga Carbó 2023",
         "description":"Torneo Femenino",
         "type":"ligue",
         "teams":[
@@ -23,6 +23,26 @@
                 "pg": 5,
                 "pe": 2,
                 "pp": 13
+            },
+            {
+                "name":"team3",
+                "description":"team description",
+                "ubication":"team ubication",
+                "points":29,
+                "pj": 20,
+                "pg": 8,
+                "pe": 5,
+                "pp": 7
+            },
+            {
+                "name":"Sacachispas",
+                "description":"team description",
+                "ubication":"team ubication",
+                "points":14,
+                "pj": 20,
+                "pg": 10,
+                "pe": 4,
+                "pp": 6
             }
         ]
     }
