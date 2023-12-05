@@ -1,0 +1,58 @@
+body{
+    background-image: 
+    radial-gradient(#fdfdfd 2px,  #0049ff  2px),
+    radial-gradient(#0049ff 2px, #fdfdfd 2px);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Helvetica Neue, sans-serif';
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+
+textarea, input{
+    font-family: 'Helvetica Neue, sans-serif';
+
+}
+
+main{
+    background: #333;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+
+}
+
+main > div {
+    padding: 20px ;
+}
+
+h1{
+    margin: 0;
+}
+
+@media (min-width: 500px){
+    main {
+    height: 90vh;
+    width: 450px;
+
+    }
+}
+

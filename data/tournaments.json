@@ -1,0 +1,29 @@
+{
+    "0":{
+        "name":"Uefa",
+        "description":"Torneo Femenino",
+        "type":"ligue",
+        "teams":[
+            {
+                "name":"team1",
+                "description":"team description",
+                "ubication":"team ubication",
+                "points":43,
+                "pj": 20,
+                "pg": 13,
+                "pe": 4,
+                "pp": 3
+            },
+            {
+                "name":"team2",
+                "description":"team description",
+                "ubication":"team ubication",
+                "points":17,
+                "pj": 20,
+                "pg": 5,
+                "pe": 2,
+                "pp": 13
+            }
+        ]
+    }
+}
