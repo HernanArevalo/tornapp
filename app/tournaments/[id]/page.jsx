@@ -1,3 +1,4 @@
+// import { BounceLoader, BarLoader } from 'react-spinners';
 import tournaments from '../../../data/tournaments.json';
 import styles from './tournament.module.css';
 
@@ -27,7 +28,7 @@ export default async function TournamentId ({ params }) {
           <thead>
               <tr>
                 <th></th>
-                <th>EQUIPO</th>
+                <th>EQUIPOS</th>
                 <th>PJ</th>
                 <th>PG</th>
                 <th>PE</th>
@@ -49,6 +50,12 @@ export default async function TournamentId ({ params }) {
             ))}
           </tbody>
         </table>
+        {/* <BarLoader color="#36d7b7" />
+        <BounceLoader
+          color="red"
+          loading
+          speedMultiplier={1}
+        /> */}
 
       </div>
     </>

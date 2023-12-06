@@ -86,7 +86,8 @@ td:first-child{
   min-width: 25px;
 }
 tbody tr{
-  background: #E6E6E6;
+background-color: #ffffff;
+opacity: 1;
 }
 thead {
   background: #000000;
@@ -103,14 +104,16 @@ th:first-child {
 
 tbody > :first-child{
   background-color: #89B9AD;
+  opacity: 1;
   
 }
 tbody > :nth-child(n+2):nth-child(-n+4) {
   background-color: #C7DCA7;
-  
+
 }
 
 
 tbody > :nth-last-child(-n+2) {
   background-color: #FFC5C5;
+
 }

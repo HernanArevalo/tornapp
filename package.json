@@ -11,7 +11,9 @@
   "dependencies": {
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-loading": "^2.0.3",
+    "react-spinners": "^0.13.8"
   },
   "devDependencies": {
     "eslint": "^8",
