@@ -1,6 +1,7 @@
 .teamName{
   text-align: left;
-  padding-left: 15px;
+  max-width: 200px;
+  padding: 0 15px;
   text-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
