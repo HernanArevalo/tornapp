@@ -7,7 +7,6 @@ body{
     padding: 0;
     margin: 0;
     overflow: hidden;
-    font-family: 'Helvetica Neue, sans-serif';
     display: grid;
     height: 100vh;
     place-items: center;
@@ -19,11 +18,7 @@ body{
 }
 a{
   text-decoration: none;
-}
-
-textarea, input{
-    font-family: 'Helvetica Neue, sans-serif';
-
+  cursor: pointer;
 }
 
 main{
@@ -61,33 +56,41 @@ h1{
 /* * TABLES */
 
 table {
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
   width: 100%;
   height: auto;
   text-align: center;
   border-spacing: 5px;
 }
 td, th {
-  padding: 3px 2px;
-  border-radius: 10px;
-  box-shadow: 2px 2px #252422;
+  padding: 3px 5px;
+  border-radius: 12px;
   
 }
 td {
-  font-size: 13px;
+  font-size: 16px;
   color: black;
+  height: 100%;
+  overflow: hidden;
+  max-width: 170px;
+
 }
 tr{
   height: 30px;
   border-spacing: 5px 1rem;
+  border-radius: 12px;
 }
 
 td:first-child{
   min-width: 25px;
+  border-radius: 12px;
+
 }
 tbody tr{
-background-color: #ffffff;
-opacity: 1;
+  background-color: #ffffff;
+  opacity: 1;
+  overflow: hidden;
 }
 thead {
   background: #000000;

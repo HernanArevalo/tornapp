@@ -1,0 +1,16 @@
+{
+    "teams":[
+        {
+            "name":"Rangers",
+            "id":"12345678",
+            "code":"RAN",
+            "founded":"2017",
+            "logo_path":"https://cdn.sportmonks.com/images/soccer/teams/30/62.png",
+            "pj":10,
+            "pg":8,
+            "pe":5,
+            "pp":7
+
+        }
+    ]
+}

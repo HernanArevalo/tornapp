@@ -1,0 +1,112 @@
+{
+    "abc":{
+        "name":"Liga Carbó 2023",
+        "description":"Torneo Femenino",
+        "type":"ligue",
+        "champion": true,
+        "classification": true,
+        "classification_teams": 4,
+        "relegation": true,
+        "relegation_teams": 2,
+        "teams":[
+            {
+                "name":"team1",
+                "description":"team description",
+                "ubication":"team ubication",
+                "points":43,
+                "pj": 20,
+                "pg": 13,
+                "pe": 4,
+                "pp": 3
+            },
+            {
+                "name":"team2",
+                "description":"team description",
+                "ubication":"team ubication",
+                "points":17,
+                "pj": 20,
+                "pg": 5,
+                "pe": 2,
+                "pp": 13
+            },
+            {
+                "name":"team3",
+                "description":"team description",
+                "ubication":"team ubication",
+                "points":29,
+                "pj": 20,
+                "pg": 8,
+                "pe": 5,
+                "pp": 7
+            },
+            {
+                "name":"Sacachispas dsasdasdasdsa",
+                "description":"team description",
+                "ubication":"team ubication",
+                "points":14,
+                "pj": 20,
+                "pg": 10,
+                "pe": 4,
+                "pp": 6
+            }
+        ],
+        "fixture":[
+            {
+                "date": "24/12/2023",
+                "matches":{
+                    "teams":["team1","team2"],
+                    "hour": null  
+                }
+            },
+            {
+                "date": "24/12/2023",
+                "matches":{
+                    "teams":["team1","team2"],
+                    "hour": null  
+                }
+            },
+            {
+                "date": "24/12/2023",
+                "matches":{
+                    "teams":["team1","team2"],
+                    "hour": null  
+                }
+            },
+            {
+                "date": "24/12/2023",
+                "matches":{
+                    "teams":["team1","team2"],
+                    "hour": null  
+                }
+            },
+            {
+                "date": "24/12/2023",
+                "matches":{
+                    "teams":["team1","team2"],
+                    "hour": null  
+                }
+            },
+            {
+                "date": "24/12/2023",
+                "matches":{
+                    "teams":["team1","team2"],
+                    "hour": null  
+                }
+            },
+            {
+                "date": "24/12/2023",
+                "matches":{
+                    "teams":["team1","team2"],
+                    "hour": null  
+                }
+            },
+            {
+                "date": "24/12/2023",
+                "matches":{
+                    "teams":["team1","team2"],
+                    "hour": null  
+                }
+            }
+        ]
+    }
+}

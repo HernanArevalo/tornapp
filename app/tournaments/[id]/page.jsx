@@ -1,6 +1,8 @@
 // import { BounceLoader, BarLoader } from 'react-spinners';
-import tournaments from '../../../data/tournaments.json';
+import Image from 'next/image';
+import tournaments from '../../../data/tournaments.data.json';
 import styles from './tournament.module.css';
+import Link from 'next/link';
 
 const tournament = tournaments['abc']
 
@@ -17,6 +19,12 @@ const fetchTournament = async() => {
 
 export default async function TournamentId ({ params }) {
 
+  console.log(new Date().getDate());
+
+  const fecha = "12/8/2023"
+  console.log(fecha.getDate);
+
+
  const tournament = await fetchTournament();
 
   return (
@@ -24,6 +32,21 @@ export default async function TournamentId ({ params }) {
       <div>
         <h2 className={ styles.tournamentName }>{tournament[0]?.league_name}</h2>
 
+        <Link href={`/tournament`}>
+          <button className={ styles.TableButton}>
+            TABLA
+          </button>
+        </Link>
+        <Link href={`/tournament/fixture`}>
+          <button className={ styles.FixtureButton}>
+            FIXTURE
+          </button>
+        </Link>
+        <Link href={`/tournament/teams`}>
+          <button className={ styles.TeamsButton}>
+            EQUIPOS
+          </button>
+        </Link>
         <table>
           <thead>
               <tr>
@@ -36,11 +59,16 @@ export default async function TournamentId ({ params }) {
                 <th>PT</th>
               </tr>
           </thead>
-          <tbody>
+          <tbody className={ styles.tBody}>
             { tournament.slice(0,15).map((team, idx) =>(
               <tr key={team.name}>
                 <td>{idx+1}</td>
-                <td className={styles.teamName}>{team.team_name}</td>
+                <td>
+                  <div className={ styles.tD}>
+                    <Image className={styles.teamImg} src={team.team_badge} width="20" height="20"/>
+                    {team.team_name}
+                  </div>
+                </td>
                 <td>{team.overall_league_payed}</td>
                 <td>{team.overall_league_W}</td>
                 <td>{team.overall_league_D}</td>
@@ -50,6 +78,7 @@ export default async function TournamentId ({ params }) {
             ))}
           </tbody>
         </table>
+
         {/* <BarLoader color="#36d7b7" />
         <BounceLoader
           color="red"

@@ -1,0 +1,31 @@
+.myTeams, .myTournaments{
+    background-color: white;
+    min-height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    color: black;
+    padding: 15px 15px;
+}
+
+.h3{
+    margin: 0;
+    padding: 0;
+}
+
+.myTeams img{
+    width: 64px;
+}
+
+.teamData{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.teamStats{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
