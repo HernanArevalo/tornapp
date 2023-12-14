@@ -19,74 +19,50 @@ const fetchTournament = async() => {
 
 export default async function TournamentId ({ params }) {
 
-  console.log(new Date().getDate());
 
-  const fecha = "12/8/2023"
-  console.log(fecha.getDate);
-
-
- const tournament = await fetchTournament();
+  const tournament = await fetchTournament();
 
   return (
     <>
-      <div>
-        <h2 className={ styles.tournamentName }>{tournament[0]?.league_name}</h2>
+      <table>
+        <thead>
+            <tr>
+              <th></th>
+              <th>EQUIPOS</th>
+              <th>PJ</th>
+              <th>PG</th>
+              <th>PE</th>
+              <th>PP</th>
+              <th>PT</th>
+            </tr>
+        </thead>
+        <tbody className={ styles.tBody}>
+          { tournament.slice(0,15).map((team, idx) =>(
+            <tr key={team.name}>
+              <td>{idx+1}</td>
+              <td>
+                <div className={ styles.tD}>
+                  <Image className={styles.teamImg} src={team.team_badge} width="20" height="20"/>
+                  {team.team_name}
+                </div>
+              </td>
+              <td>{team.overall_league_payed}</td>
+              <td>{team.overall_league_W}</td>
+              <td>{team.overall_league_D}</td>
+              <td>{team.overall_league_L}</td>
+              <td>{team.overall_league_PTS}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-        <Link href={`/tournament`}>
-          <button className={ styles.TableButton}>
-            TABLA
-          </button>
-        </Link>
-        <Link href={`/tournament/fixture`}>
-          <button className={ styles.FixtureButton}>
-            FIXTURE
-          </button>
-        </Link>
-        <Link href={`/tournament/teams`}>
-          <button className={ styles.TeamsButton}>
-            EQUIPOS
-          </button>
-        </Link>
-        <table>
-          <thead>
-              <tr>
-                <th></th>
-                <th>EQUIPOS</th>
-                <th>PJ</th>
-                <th>PG</th>
-                <th>PE</th>
-                <th>PP</th>
-                <th>PT</th>
-              </tr>
-          </thead>
-          <tbody className={ styles.tBody}>
-            { tournament.slice(0,15).map((team, idx) =>(
-              <tr key={team.name}>
-                <td>{idx+1}</td>
-                <td>
-                  <div className={ styles.tD}>
-                    <Image className={styles.teamImg} src={team.team_badge} width="20" height="20"/>
-                    {team.team_name}
-                  </div>
-                </td>
-                <td>{team.overall_league_payed}</td>
-                <td>{team.overall_league_W}</td>
-                <td>{team.overall_league_D}</td>
-                <td>{team.overall_league_L}</td>
-                <td>{team.overall_league_PTS}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* <BarLoader color="#36d7b7" />
+      <BounceLoader
+        color="red"
+        loading
+        speedMultiplier={1}
+      /> */}
 
-        {/* <BarLoader color="#36d7b7" />
-        <BounceLoader
-          color="red"
-          loading
-          speedMultiplier={1}
-        /> */}
-
-      </div>
     </>
   )
 }

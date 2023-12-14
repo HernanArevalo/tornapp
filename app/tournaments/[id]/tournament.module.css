@@ -21,4 +21,18 @@
   margin: 10px 0px;
   margin-right: 20px;
   color: black;
+  width: fit-content;
+  display: inline-block;
+}
+
+.TournamentDiv{
+  padding: 0px 20px;
+
+}
+
+.tournamentName{
+  font-size: 4vh;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }

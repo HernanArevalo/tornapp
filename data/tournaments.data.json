@@ -2,6 +2,8 @@
     "abc":{
         "name":"Liga Carbó 2023",
         "description":"Torneo Femenino",
+        "location":"La gran 7",
+        "city":"Córdoba, Argentina",
         "type":"ligue",
         "champion": true,
         "classification": true,
@@ -50,63 +52,23 @@
                 "pp": 6
             }
         ],
-        "fixture":[
-            {
-                "date": "24/12/2023",
-                "matches":{
-                    "teams":["team1","team2"],
-                    "hour": null  
-                }
-            },
-            {
-                "date": "24/12/2023",
-                "matches":{
-                    "teams":["team1","team2"],
-                    "hour": null  
-                }
-            },
-            {
-                "date": "24/12/2023",
-                "matches":{
-                    "teams":["team1","team2"],
-                    "hour": null  
-                }
-            },
-            {
-                "date": "24/12/2023",
-                "matches":{
-                    "teams":["team1","team2"],
-                    "hour": null  
-                }
-            },
-            {
-                "date": "24/12/2023",
-                "matches":{
-                    "teams":["team1","team2"],
-                    "hour": null  
-                }
-            },
-            {
-                "date": "24/12/2023",
-                "matches":{
-                    "teams":["team1","team2"],
-                    "hour": null  
-                }
-            },
-            {
-                "date": "24/12/2023",
-                "matches":{
-                    "teams":["team1","team2"],
-                    "hour": null  
-                }
-            },
-            {
-                "date": "24/12/2023",
-                "matches":{
-                    "teams":["team1","team2"],
-                    "hour": null  
-                }
+        "fixture":{ 
+            "fechas": {
+                "1":[
+                    {
+                        "date": "24/12/2023",
+                        "hour": null,
+                        "localteam": "Equipo A",
+                        "visitorteam": "Equipo B",
+                        "result": null,
+                        "localteam_score": 5,
+                        "visitorteam_score": 1
+                    }
+                ]
             }
-        ]
+                
+
+                
+        }
     }
 }
