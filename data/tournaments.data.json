@@ -53,19 +53,54 @@
             }
         ],
         "fixture":{ 
-            "fechas": {
-                "1":[
+            "fechas": [
                     {
-                        "date": "24/12/2023",
-                        "hour": null,
-                        "localteam": "Equipo A",
-                        "visitorteam": "Equipo B",
-                        "result": null,
-                        "localteam_score": 5,
-                        "visitorteam_score": 1
+                        "number": "1",
+                        "matches":[
+                            {
+                            "id": 21323,
+                            "date": "24/12/2023",
+                            "hour": "23:00",
+                            "localteam": "Bournemouth",
+                            "localteamID": 28,
+                            "localteam_badge": "https://apiv3.apifootball.com/badges/3071_afc-bournemouth.jpg",
+                            "visitorteam": "Fulham",
+                            "visitorteam_badge": "https://apiv3.apifootball.com/badges/3085_fulham.jpg",
+                            "visitorteamID": 43,
+                            "result": null,
+                            "localteam_score": 5,
+                            "visitorteam_score": 1,
+                            "events":{
+                                "goals":{
+                                    "6":{
+                                        "player": "Sandra Perez",
+                                        "penalty": false
+                                    },
+                                    "26":{
+                                        "player": "Sandra Perez",
+                                        "penalty": true
+                                    }
+                                },
+                                "cards":{
+                                    "7":{
+                                        "player": "Sandra Perez",
+                                        "red": false
+                                    },
+                                    "26":{
+                                        "player": "Sandra Perez",
+                                        "red": true
+                                    }
+    
+                                },
+                                "others":{
+    
+                                }
+                            }
+                            }
+                        ]
                     }
-                ]
-            }
+            ]
+            
                 
 
                 

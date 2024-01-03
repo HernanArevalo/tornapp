@@ -1,0 +1,78 @@
+.fechaNumber{
+    background-color: black;
+    padding: 6px 6px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+}
+.matches{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.match{
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 500;
+    box-sizing: content-box;
+    overflow: hidden;
+    
+}
+
+.time{
+    padding: 4px 6px;
+    background-color: #acabab;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.teamA, .teamB{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+.teamA{
+    justify-content: right;
+}
+.teamB{
+    justify-content: left;
+}
+.teamName {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.goals{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 4px 4px;
+    background-color: #acabab;
+    box-sizing: border-box;
+    text-align: center;
+    gap: 3px;
+}
+
+.goals > span{
+    font-weight: 100;
+}
