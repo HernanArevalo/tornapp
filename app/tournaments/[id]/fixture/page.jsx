@@ -10,32 +10,15 @@ const fetchTournament = async() => {
   }
 
 
-  export default async function FixturePage ({ params }) {
+  export default function FixturePage ({ params }) {
       
-      const teams = await fetchTournament();
-      
-      const checkImageUrl = async(url) => {
-        if (typeof window !== 'undefined') {
-          
-          const img = new Image();
-          img.src = url
-      
-          img.onload = function () {
-              console.log(url);
-              return url
-          };
-          
-          img.onerror = function () {
-              console.log('/default_team_badge.svg');
-              return '/default_team_badge.svg'
-          };
-      }}
-      
+      const tournament = tournaments['abc']
+
 return (
 <div>
 <h1>FIXTURE</h1>
 
-{   tournaments['abc'].fixture.fechas.map(fecha => (
+{   tournament.fixture.fechas.map(fecha => (
     <div key={fecha.number} className=''>
         <div className={styles.fechaNumber}>
             {fecha.number}
@@ -61,9 +44,9 @@ return (
                 </div>
 
                 <div className={ styles.teamB }>
-                    <Image className={styles.teamImg} src={checkImageUrl(match.visitorteam_badge)} width="20" height="20" alt=''/>
+                    <Image className={styles.teamImg} src={match.visitorteam_badge} width="20" height="20" alt=''/>
                     <div className={ styles.teamName }>
-                        {teams[12].team_name}
+                        {match.visitorteam}
                     </div>
                 </div>
                   
