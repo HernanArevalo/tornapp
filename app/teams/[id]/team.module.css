@@ -1,0 +1,50 @@
+.teamHead{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 5px 20px;
+    margin-top: 20px;
+    
+}
+
+.teamHead :hover{
+    background-color: green;
+}
+
+.teamDiv{
+    padding: 0px;
+}
+
+.teamName{
+  font-size: 4vh;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 8px;
+    font-size: 15px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    margin: 10px 0px;
+    margin-right: 20px;
+    width: fit-content;
+    display: inline-block;
+  }
+
+  
+.teamContent{
+    padding: 0px 20px;
+}

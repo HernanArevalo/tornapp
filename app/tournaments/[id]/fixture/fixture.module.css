@@ -1,7 +1,7 @@
 .fechaNumber{
     background-color: black;
     padding: 6px 6px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     text-align: center;
     font-weight: 700;
     margin-bottom: 10px;
@@ -20,12 +20,12 @@
     justify-content: space-between;
     align-items: center;
     color: black;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     text-align: center;
     font-weight: 500;
     box-sizing: content-box;
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 5x;
     
 }
 

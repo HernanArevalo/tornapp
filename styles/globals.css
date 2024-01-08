@@ -18,6 +18,8 @@ body{
 }
 a{
   cursor: pointer;
+  text-decoration: none;
+  
 }
 
 main{
@@ -34,10 +36,6 @@ main{
     position: relative;
     width: 100%;
 
-}
-
-main > div {
-    padding: 20px ;
 }
 
 h1{
@@ -64,7 +62,7 @@ table {
 }
 td, th {
   padding: 3px 5px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   
 }
 td {
@@ -78,12 +76,12 @@ td {
 tr{
   height: 30px;
   border-spacing: 5px 1rem;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 td:first-child{
   min-width: 25px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 
 }
 tbody tr{

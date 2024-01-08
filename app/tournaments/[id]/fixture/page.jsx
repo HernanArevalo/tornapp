@@ -10,9 +10,9 @@ const fetchTournament = async() => {
   }
 
 
-  export default function FixturePage ({ params }) {
+export default function FixturePage ({ params }) {
       
-      const tournament = tournaments['abc']
+    const tournament = tournaments['abc']
 
 return (
 <div>

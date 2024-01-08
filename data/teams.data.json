@@ -1,16 +1,54 @@
 {
-    "teams":[
-        {
-            "name":"Rangers",
+    "teams":{
+        "43253":{
+            "name":"Rangers FC",
             "id":"12345678",
             "code":"RAN",
             "founded":"2017",
+            "location":"Córdoba, Argentina",
             "logo_path":"https://cdn.sportmonks.com/images/soccer/teams/30/62.png",
             "pj":10,
             "pg":8,
             "pe":5,
-            "pp":7
-
+            "pp":7,
+            "players":[
+                {"name":"Fede Ramos",
+                 "id":"78568",
+                 "position":"P0"    
+            },
+                {"name":"Fede Ramos",
+                 "id":"78568",
+                 "position":"DFC"    
+            },
+                {"name":"Fede Ramos",
+                 "id":"78568",
+                 "position":"DFI"    
+            },
+                {"name":"Fede Ramos",
+                 "id":"78568",
+                 "position":"DFD"    
+            },
+                {"name":"Fede Ramos",
+                 "id":"78568",
+                 "position":"MC"    
+            },
+                {"name":"Fede Ramos",
+                 "id":"78568",
+                 "position":"MC"    
+            },
+                {"name":"Fede Ramos",
+                 "id":"78568",
+                 "position":"MC"    
+            },
+                {"name":"Fede Ramos",
+                 "id":"78568",
+                 "position":"DC"    
+            },
+                {"name":"Fede Ramos",
+                 "id":"78568",
+                 "position":"DC"    
+            }
+            ]
         }
-    ]
+    }
 }

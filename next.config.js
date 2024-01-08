@@ -6,6 +6,10 @@ const nextConfig = {
           protocol: 'https',
           hostname: 'apiv3.apifootball.com',
         },
+        {
+          protocol: 'https',
+          hostname: 'cdn.sportmonks.com',
+        },
       ],
     },
   }
