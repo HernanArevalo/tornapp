@@ -1,7 +1,7 @@
 
-import Image from 'next/image';
 import tournaments from '../../../../data/tournaments.data.json';
 import styles from './fixture.module.css'
+import MatchResume from '../../components/MatchResume';
 
 
 const fetchTournament = async() => {
@@ -21,37 +21,11 @@ return (
 {   tournament.fixture.fechas.map(fecha => (
     <div key={fecha.number} className=''>
         <div className={styles.fechaNumber}>
-            {fecha.number}
+            FECHA {fecha.number}
         </div>
         <div className={ styles.matches }>
         { fecha.matches.map(match => (
-            <div key={match.id} className={styles.match}>
-                <div className={ styles.time }>
-                  {match.hour}
-                </div>
-
-                <div className={ styles.teamA }>
-                    <div className={ styles.teamName }>
-                        {match.localteam}
-                    </div>
-                    <Image className={styles.teamImg} src={match.localteam_badge || '/default_team_badge.svg'} width="20" height="20" alt=''/>
-                </div>
-
-                <div className={ styles.goals }>
-                    0
-                    <span>|</span>
-                    0
-                </div>
-
-                <div className={ styles.teamB }>
-                    <Image className={styles.teamImg} src={match.visitorteam_badge} width="20" height="20" alt=''/>
-                    <div className={ styles.teamName }>
-                        {match.visitorteam}
-                    </div>
-                </div>
-                  
-            </div>
-
+            <MatchResume key={match.id} match={match}/>
         ))
 
         }

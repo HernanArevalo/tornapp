@@ -25,6 +25,7 @@
     font-weight: 500;
     box-sizing: content-box;
     overflow: hidden;
+    margin-bottom: 5px;
     
 }
 
@@ -33,6 +34,7 @@
     background-color: #acabab;
     box-sizing: border-box;
     text-align: center;
+    min-width: 57px;
 
 }
 
@@ -57,9 +59,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
   }
 
 .goals{
@@ -71,6 +71,7 @@
     box-sizing: border-box;
     text-align: center;
     gap: 3px;
+    min-width: 48.5px;
 }
 
 .goals > span{
