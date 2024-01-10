@@ -1,54 +1,157 @@
 {
-    "teams":{
-        "43253":{
-            "name":"Rangers FC",
-            "id":"12345678",
-            "code":"RAN",
-            "founded":"2017",
-            "location":"Córdoba, Argentina",
-            "logo_path":"https://cdn.sportmonks.com/images/soccer/teams/30/62.png",
-            "pj":10,
-            "pg":8,
-            "pe":5,
-            "pp":7,
-            "players":[
-                {"name":"Fede Ramos",
-                 "id":"78568",
-                 "position":"P0"    
-            },
-                {"name":"Fede Ramos",
-                 "id":"78568",
-                 "position":"DFC"    
-            },
-                {"name":"Fede Ramos",
-                 "id":"78568",
-                 "position":"DFI"    
-            },
-                {"name":"Fede Ramos",
-                 "id":"78568",
-                 "position":"DFD"    
-            },
-                {"name":"Fede Ramos",
-                 "id":"78568",
-                 "position":"MC"    
-            },
-                {"name":"Fede Ramos",
-                 "id":"78568",
-                 "position":"MC"    
-            },
-                {"name":"Fede Ramos",
-                 "id":"78568",
-                 "position":"MC"    
-            },
-                {"name":"Fede Ramos",
-                 "id":"78568",
-                 "position":"DC"    
-            },
-                {"name":"Fede Ramos",
-                 "id":"78568",
-                 "position":"DC"    
-            }
-            ]
+    "teams":[
+      {
+      "name":"Rangers FC",
+      "id":"12345678",
+      "code":"RAN",
+      "foundation":"2017",
+      "location":"Córdoba, Argentina",
+      "logo_path":"https://cdn.sportmonks.com/images/soccer/teams/30/62.png",
+      "pj":20,
+      "pg":8,
+      "pe":5,
+      "pp":7,
+      "foundationYear": 1901,
+      "maxVictory": "5-0",
+      "maxDefeat": "1-4",
+      "currentStreak": "3 wins",
+      "cleanSheets": 12,
+      "tournaments": [
+        {
+          "tournament_id": 101,
+          "name": "Liga Nacional",
+          "year": 2023,
+          "currentlyPlaying": true,
+          "finalPosition": 2
+        },
+        {
+          "tournament_id": 102,
+          "name": "Copa Libertadores",
+          "year": 2022,
+          "currentlyPlaying": false,
+          "finalPosition": 1
         }
+      ],
+      "players": [
+        {
+          "id": 101,
+          "name": "Lionel Messi",
+          "position": "Forward",
+          "goalsScored": 25,
+          "yellowCards": 3,
+          "redCards": 0
+        },
+        {
+          "id": 103,
+          "name": "Juan Román Riquelme",
+          "position": "MCO",
+          "goalsScored": 8,
+          "yellowCards": 1,
+          "redCards": 0
+        },
+        {
+          "id": 104,
+          "name": "Franco Armani",
+          "position": "PO",
+          "goalsScored": 0,
+          "yellowCards": 0,
+          "redCards": 0
+        },
+        {
+          "id": 105,
+          "name": "Pablo Aimar",
+          "position": "MC",
+          "goalsScored": 5,
+          "yellowCards": 4,
+          "redCards": 0
+        },
+        {
+          "id": 106,
+          "name": "Javier Mascherano",
+          "position": "MCD",
+          "goalsScored": 3,
+          "yellowCards": 6,
+          "redCards": 0
+        },
+        {
+          "id": 107,
+          "name": "Gabriel Batistuta",
+          "position": "DC",
+          "goalsScored": 12,
+          "yellowCards": 2,
+          "redCards": 0
+        },
+        {
+          "id": 108,
+          "name": "Jorge Valdano",
+          "position": "MCO",
+          "goalsScored": 6,
+          "yellowCards": 2,
+          "redCards": 0
+        },
+        {
+          "id": 109,
+          "name": "Hugo Gatti",
+          "position": "PO",
+          "goalsScored": 0,
+          "yellowCards": 1,
+          "redCards": 0
+        },
+        {
+          "id": 110,
+          "name": "Mario Kempes",
+          "position": "DC",
+          "goalsScored": 10,
+          "yellowCards": 3,
+          "redCards": 0
+        }
+      ],
+      "manager": {
+        "id": 201,
+        "name": "Enzo Pérez",
+        "position": "Head Coach"
+      },
+      "matches": [
+        {
+          "date": "2023-08-15",
+          "opponent": "Boca Juniors",
+          "rival_id": 2,
+          "score": 3,
+          "rival_score": 0
+        },
+        {
+          "date": "2023-08-20",
+          "opponent": "San Lorenzo",
+          "rival_id": 3,
+          "score": 2,
+          "rival_score": 2
+        },
+        {
+          "date": "2023-08-25",
+          "opponent": "Racing Club",
+          "rival_id": 4,
+          "score": 4,
+          "rival_score": 1
+        },
+        {
+          "date": "2023-09-01",
+          "opponent": "Independiente",
+          "rival_id": 5,
+          "score": 2,
+          "rival_score": 0
+        },
+        {
+          "date": "2023-09-10",
+          "opponent": "Vélez Sársfield",
+          "rival_id": 6,
+          "score": 3,
+          "rival_score": 1
+        },
+        {
+          "date": "2023-09-15",
+          "opponent": "Newell's Old"
+        }
+        ]
     }
+    ]
 }

@@ -48,3 +48,82 @@
 .teamContent{
     padding: 0px 20px;
 }
+
+.teamStats{
+    background-color: white;
+    color: black;
+    margin-top: 10px;
+    padding: 10px;
+    
+}
+
+.teamStats > div{
+    margin-bottom: 10px;
+}
+
+.matchesStats{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 25%);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+}
+
+.matchesStat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    font-size: 25px;
+
+}
+
+.matchesStat > h5, .matchesStat > span{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+
+}
+
+.matchesStats > :nth-child(1){
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.matchesStats > :nth-child(2){
+    color: #47b155;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    
+}
+.matchesStats > :nth-child(3){
+    color: #e4db5c;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    
+}
+
+
+.matchesStats > :nth-child(4) {
+    color: #ff6060;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+
+}
+
+/* * Puntos obtenidos */
+
+.pointsStats{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.puntosObtenidos{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 20px;
+
+}
