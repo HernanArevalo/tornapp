@@ -36,6 +36,7 @@
         {
           "id": 101,
           "name": "Lionel Messi",
+          "nationality": "ARG",
           "position": "Forward",
           "goalsScored": 25,
           "yellowCards": 3,
@@ -44,6 +45,7 @@
         {
           "id": 103,
           "name": "Juan Román Riquelme",
+          "nationality": "ARG",
           "position": "MCO",
           "goalsScored": 8,
           "yellowCards": 1,
@@ -52,6 +54,7 @@
         {
           "id": 104,
           "name": "Franco Armani",
+          "nationality": "ARG",
           "position": "PO",
           "goalsScored": 0,
           "yellowCards": 0,
@@ -60,6 +63,7 @@
         {
           "id": 105,
           "name": "Pablo Aimar",
+          "nationality": "ARG",
           "position": "MC",
           "goalsScored": 5,
           "yellowCards": 4,
@@ -68,6 +72,7 @@
         {
           "id": 106,
           "name": "Javier Mascherano",
+          "nationality": "ARG",
           "position": "MCD",
           "goalsScored": 3,
           "yellowCards": 6,
@@ -76,6 +81,7 @@
         {
           "id": 107,
           "name": "Gabriel Batistuta",
+          "nationality": "ARG",
           "position": "DC",
           "goalsScored": 12,
           "yellowCards": 2,
@@ -84,6 +90,7 @@
         {
           "id": 108,
           "name": "Jorge Valdano",
+          "nationality": "ARG",
           "position": "MCO",
           "goalsScored": 6,
           "yellowCards": 2,
@@ -92,6 +99,7 @@
         {
           "id": 109,
           "name": "Hugo Gatti",
+          "nationality": "ARG",
           "position": "PO",
           "goalsScored": 0,
           "yellowCards": 1,
@@ -100,12 +108,18 @@
         {
           "id": 110,
           "name": "Mario Kempes",
+          "nationality": "ARG",
           "position": "DC",
           "goalsScored": 10,
           "yellowCards": 3,
           "redCards": 0
         }
       ],
+      "manager": {
+        "id": 201,
+        "name": "Enzo Pérez",
+        "position": "Head Coach"
+      },
       "matches": [
         {
           "date": "2023-08-15",
