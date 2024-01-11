@@ -70,7 +70,6 @@
     grid-template-rows: repeat(2, auto);
     align-items: center;
     justify-content: center;
-    row-gap: 5px;
 }
 
 .matchesStat {
@@ -121,13 +120,22 @@
     flex-direction: row;
     gap: 30px;
 }
-.puntosObtenidos{
+.data{
     display: flex;
     flex-direction: row;
     gap: 8px;
     font-weight: 800;
     font-size: 20px;
+    line-height: 15px;
 
+}
+.dataLight{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 15px
 }
 
 .player > div{
@@ -149,4 +157,8 @@
 .teamContent2{
     z-index: 2;
     position: relative;
+}
+
+.teamContent2 > div{
+    margin-bottom: 10px;
 }
