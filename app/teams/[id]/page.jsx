@@ -79,7 +79,7 @@ return (
 			</div>
 		</div>
 		<div>
-			<span>Tarjetas rojas</span>
+			<span>Máxima derrota</span>
 			<div className={styles.puntosObtenidos}>
 			{team.maxDefeat}
 			</div>
@@ -87,10 +87,12 @@ return (
 		
 	</div>
 
+	{team.manager &&	
 	<div>
 		<span>Director Técnico</span>
 		<h3>{team.manager.name}</h3>
 	</div>
+	}
 	<div>
 		<span>Goleador Actual</span>
 		<h3>{ findScorer(team.players).name }</h3>
