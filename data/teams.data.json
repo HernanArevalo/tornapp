@@ -20,15 +20,15 @@
         {
           "tournament_id": 101,
           "name": "Liga Nacional",
-          "year": 2023,
-          "currentlyPlaying": true,
+          "year": 2022,
+          "currentlyPlaying": false,
           "finalPosition": 2
         },
         {
           "tournament_id": 102,
           "name": "Copa Libertadores",
-          "year": 2022,
-          "currentlyPlaying": false,
+          "year": 2023,
+          "currentlyPlaying": true,
           "finalPosition": 1
         }
       ],

@@ -162,3 +162,22 @@
 .teamContent2 > div{
     margin-bottom: 10px;
 }
+
+.lastTournament{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.playing, .finished{
+    font-weight: 300;
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+.playing{
+    background-color: #47b155;
+}
+.finished{
+    background-color: #ff6060;
+}

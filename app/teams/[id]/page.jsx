@@ -17,6 +17,7 @@ export default function TeamPage () {
 
     const team = teams.find(element => element.id == "12345678")
 	const scorer = findScorer (team.players)
+	const lastTournament = team.tournaments[team.tournaments.length -1]
 
 
 return (
@@ -111,6 +112,27 @@ return (
 				<h3 className={styles.data}>{ scorer.name }</h3>
 				<Flag code={scorer.nationality} height="16" />
 				<div className={styles.dataLight}>- { scorer.goalsScored } {scorer.goalsScored == 1? 'GOL':'GOLES'}</div>
+			</div>
+		</div>
+
+		}
+		{lastTournament &&	
+		<div className={styles.lastTournament}>
+			<span>Último torneo</span>
+			<div>
+				<h3 className={styles.data}>{ lastTournament?.name }</h3>
+			</div>
+			<div className={styles.dataLight}>
+				Posición: { lastTournament.finalPosition }°
+				{ lastTournament.currentlyPlaying ?
+				<div className={styles.playing}>
+					JUGANDO
+				</div>
+				:
+				<div className={styles.finished}>
+					TERMINADO
+				</div>
+				}
 			</div>
 		</div>
 

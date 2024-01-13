@@ -33,6 +33,11 @@ return (
                 JUGADORES
             </div>
             </Link>
+            <Link href={`/teams/${params.id}/tournaments`}>
+            <div className={ `${styles.button}` }>
+                TORNEOS
+            </div>
+            </Link>
         </div>
         { children }
     </div>
