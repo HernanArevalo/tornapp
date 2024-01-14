@@ -24,33 +24,33 @@ export default async function TournamentId ({ params }) {
 
   return (
     <>
-      <table>
-        <thead>
-            <tr>
-              <th></th>
-              <th>EQUIPOS</th>
-              <th>PJ</th>
-              <th>PG</th>
-              <th>PE</th>
-              <th>PP</th>
-              <th>PT</th>
+      <table className={ styles.table}>
+        <thead className={ styles.thead}>
+            <tr className={ styles.tr}>
+              <th className={ styles.th }></th>
+              <th className={ styles.th }>EQUIPOS</th>
+              <th className={ styles.th }>PJ</th>
+              <th className={ styles.th }>PG</th>
+              <th className={ styles.th }>PE</th>
+              <th className={ styles.th }>PP</th>
+              <th className={ styles.th }>PT</th>
             </tr>
         </thead>
-        <tbody className={ styles.tBody}>
+        <tbody className={ styles.tbody }>
           { tournament.slice(0,15).map((team, idx) =>(
-            <tr key={team.name}>
-              <td>{idx+1}</td>
-              <td>
+            <tr key={team.name} className={styles.tr}>
+              <td className={styles.td}>{idx+1}</td>
+              <td className={ styles.td}>
                 <div className={ styles.tD}>
                   <Image className={styles.teamImg} src={team.team_badge} width="20" height="20"/>
                   {team.team_name}
                 </div>
               </td>
-              <td>{team.overall_league_payed}</td>
-              <td>{team.overall_league_W}</td>
-              <td>{team.overall_league_D}</td>
-              <td>{team.overall_league_L}</td>
-              <td>{team.overall_league_PTS}</td>
+              <td className={ styles.td }>{team.overall_league_payed}</td>
+              <td className={ styles.td }>{team.overall_league_W}</td>
+              <td className={ styles.td }>{team.overall_league_D}</td>
+              <td className={ styles.td }>{team.overall_league_L}</td>
+              <td className={ styles.td }>{team.overall_league_PTS}</td>
             </tr>
           ))}
         </tbody>

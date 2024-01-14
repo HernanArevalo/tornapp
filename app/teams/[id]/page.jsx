@@ -1,4 +1,3 @@
-import tournaments from '../../../data/teams.data.json';
 import styles from './team.module.css'
 import { teams } from '../../../data/teams.data.json'
 import Flag from 'react-world-flags'

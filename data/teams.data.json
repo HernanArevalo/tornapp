@@ -36,7 +36,7 @@
         {
           "id": 101,
           "name": "Lionel Messi",
-          "position": "Forward",
+          "position": "DC",
           "number": 10,
           "goalsScored": 25,
           "yellowCards": 3,
@@ -48,7 +48,7 @@
           "id": 103,
           "name": "Juan Román Riquelme",
           "position": "MCO",
-          "number": 10,
+          "number": 7,
           "goalsScored": 8,
           "yellowCards": 1,
           "redCards": 0,
