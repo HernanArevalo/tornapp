@@ -53,7 +53,7 @@
             "yellowCards": 1,
             "redCards": 0,
             "birthdate": "1995-03-10",
-            "nationality": "CHL"
+            "nationality": "ARG"
           },
           {
             "id": 104,
@@ -64,7 +64,7 @@
             "yellowCards": 0,
             "redCards": 0,
             "birthdate": "1988-09-05",
-            "nationality": "BRA"
+            "nationality": "ARG"
           },
           {
             "id": 105,
@@ -75,7 +75,7 @@
             "yellowCards": 4,
             "redCards": 0,
             "birthdate": "1992-07-20",
-            "nationality": "URY"
+            "nationality": "ARG"
           },
           {
             "id": 106,
@@ -86,7 +86,7 @@
             "yellowCards": 6,
             "redCards": 0,
             "birthdate": "1993-12-22",
-            "nationality": "PER"
+            "nationality": "ARG"
           },
           {
             "id": 107,
@@ -97,7 +97,7 @@
             "yellowCards": 2,
             "redCards": 0,
             "birthdate": "1998-01-05",
-            "nationality": "PRY"
+            "nationality": "ARG"
           },
           {
             "id": 108,
@@ -112,14 +112,14 @@
           },
           {
             "id": 109,
-            "name": "Hugo Gatti",
+            "name": "José Luis Chilavert",
             "position": "PO",
             "number": 12,
             "goalsScored": 0,
             "yellowCards": 1,
             "redCards": 1,
             "birthdate": "1996-08-30",
-            "nationality": "ARG"
+            "nationality": "PRY"
           },
           {
             "id": 110,
