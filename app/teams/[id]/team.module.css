@@ -28,8 +28,6 @@
 }
 
 .button{
-    background-color: black;
-    color: white;
     border: none;
     padding: 8px 8px;
     font-size: 15px;
@@ -38,12 +36,24 @@
     margin-right: 20px;
     width: fit-content;
     display: inline-block;
+    transition-duration: .2s;
+}
+.button:hover{
+    background-color: rgb(49, 49, 49);
+    color: rgb(172, 172, 172);
+}
+.active{
+    background-color: white;
+    color: black;
+}
+.inactive{
+    background-color: black;
+    color: white;
   }
-
-  
 .teamContent{
     padding: 0px 20px;
 }
+
 
 .teamStats{
     background-color: white;
