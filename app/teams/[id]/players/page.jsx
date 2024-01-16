@@ -43,8 +43,6 @@ export default function PlayersPage () {
 
     const team = teams.find(element => element.id == "12345678")
 
-
-
 return (
 <>
     <h1>JUGADORES</h1>

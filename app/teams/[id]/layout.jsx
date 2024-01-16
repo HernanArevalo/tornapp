@@ -6,9 +6,6 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import './styles.css'
 
-const checkActiveButton = () => {
-
-}
 
 const fetchTeam = async() => {
     return fetch('https://apiv3.apifootball.com/?action=get_standings&league_id=152&APIkey=481770da3abeb3802b4f5fbeafdb2c93faee538ebff7194ba0594a3b81d84fdf')
@@ -16,12 +13,10 @@ const fetchTeam = async() => {
 }
 
 export default function LayoutPage ({ children, params }) {
+
     const team = teams.find(element => element.id == "12345678")
 
     const router = usePathname()
-
-    console.log(router)
-
 
 return (
 <div className={ styles.TeamDiv}>
