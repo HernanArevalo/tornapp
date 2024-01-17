@@ -25,25 +25,24 @@ return (
         <h2 className={ styles.teamName }>{team.name}</h2>
     </div>
 
-
-    <div className={ styles.teamContent }>
-        <div className={ styles.buttons}>
-            <Link href={`/teams/${params.id}`}>
-            <div className={ `${styles.button} ${router.endsWith(team.id)? 'active':'inactive'}` }>
-                GENERAL
-            </div>
-            </Link>
-            <Link href={`/teams/${params.id}/players`}>
-            <div className={ `${styles.button} ${router.endsWith('/players')? 'active':'inactive'}` }>
-                JUGADORES
-            </div>
-            </Link>
-            <Link href={`/teams/${params.id}/tournaments`}>
-            <div className={ `${styles.button} ${router.endsWith('/tournaments')? 'active':'inactive'}` }>
-                TORNEOS
-            </div>
-            </Link>
+    <div className={ styles.buttons}>
+        <Link href={`/teams/${params.id}`}>
+        <div className={ `${styles.button} ${router.endsWith(team.id)? 'active':'inactive'}` }>
+            GENERAL
         </div>
+        </Link>
+        <Link href={`/teams/${params.id}/players`}>
+        <div className={ `${styles.button} ${router.endsWith('/players')? 'active':'inactive'}` }>
+            JUGADORES
+        </div>
+        </Link>
+        <Link href={`/teams/${params.id}/tournaments`}>
+        <div className={ `${styles.button} ${router.endsWith('/tournaments')? 'active':'inactive'}` }>
+            TORNEOS
+        </div>
+        </Link>
+    </div>
+    <div className={ styles.teamContent }>
         { children }
     </div>
 </div>

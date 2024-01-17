@@ -20,6 +20,8 @@ export default function TeamPage () {
 
 
 return (
+<>
+<h1>RESUMEN</h1>
 <section className={styles.teamStats}>
 	<div className={styles.background}>
 		<Image className={styles.teamImg} src={team.logo_path} width="160" height="160" alt=""/>
@@ -140,6 +142,7 @@ return (
 	</div>
 	
 </section>
+</>
 
 )
 }

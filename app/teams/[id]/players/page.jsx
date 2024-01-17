@@ -11,7 +11,6 @@ const colors = {
 
 const positions = ["PO","DFC","LI","LD","MCD","MC","MCO","EI","ED","DC"]
 
-
 const orderPlayersByColor = (players) => {
   let listOrdered = []
 
@@ -37,7 +36,7 @@ const getColorClass = (position) => {
     return 'red';
   }
   // Si la posición no coincide con ninguna categoría de color, puedes devolver una clase predeterminada o manejarlo según tus necesidades.
-  return 'grey';
+  return 'white';
 };
 
 export default function PlayersPage () {
@@ -45,7 +44,7 @@ export default function PlayersPage () {
     const team = teams.find(element => element.id == "12345678")
 
 return (
-<>
+<div className="players-container">
     <h1>JUGADORES</h1>
     <table className="table">
         <thead>
@@ -61,15 +60,15 @@ return (
         </thead>
         <tbody className="td">
           { orderPlayersByColor(team.players.sort((a, b) => a.number - b.number)).map(pj =>(
-            <tr key={team.id} className="tr">
+            <tr key={pj.id} className="tr">
               <td className={`col ${getColorClass(pj.position)}`}></td>
               <td className={`td pos`}>{pj.position}</td>
               <td className="td num">{pj.number}</td>
               <td className="td name" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 <div className="namediv">
                   {pj.name}
+                  {/* <Flag code={pj.nationality} height="16" width="24" className="flagPlayer"/> */}
                 </div>
-                <Flag code={pj.nationality} height="16" width="24"/>
               </td>
               <td className="td data">{pj.yellowCards}</td>
               <td className="td data">{pj.redCards}</td>
@@ -79,6 +78,6 @@ return (
           ))}
         </tbody>
       </table>
-</>
+</div>
 )
 }

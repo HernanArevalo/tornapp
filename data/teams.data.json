@@ -115,23 +115,13 @@
             "name": "José Luis Chilavert",
             "position": "PO",
             "number": 12,
-            "goalsScored": 0,
+            "goalsScored": 3,
             "yellowCards": 1,
             "redCards": 1,
             "birthdate": "1996-08-30",
             "nationality": "PRY"
           },
-          {
-            "id": 110,
-            "name": "Mario Kempes",
-            "position": "DC",
-            "number": 5,
-            "goalsScored": 10,
-            "yellowCards": 3,
-            "redCards": 0,
-            "birthdate": "1994-11-12",
-            "nationality": "VEN"
-          },
+
           {
             "id": 111,
             "name": "Neymar",
@@ -155,16 +145,61 @@
             "nationality": "BRA"
           },
           {
-            "id": 113,
-            "name": "James Rodríguez",
-            "position": "MCO",
-            "number": 17,
-            "goalsScored": 9,
+            "id": 114,
+            "name": "Diego Maradona",
+            "position": "DFC",
+            "number": 3,
+            "goalsScored": 5,
+            "yellowCards": 2,
+            "redCards": 1,
+            "birthdate": "1960-10-30",
+            "nationality": "ARG"
+        },
+
+        {
+            "id": 116,
+            "name": "Cafu",
+            "position": "LD",
+            "number": 22,
+            "goalsScored": 2,
+            "yellowCards": 3,
+            "redCards": 0,
+            "birthdate": "1970-06-07",
+            "nationality": "BRA"
+        },
+        {
+            "id": 117,
+            "name": "Zinedine Zidane",
+            "position": "MCD",
+            "number": 15,
+            "goalsScored": 7,
+            "yellowCards": 4,
+            "redCards": 1,
+            "birthdate": "1972-06-23",
+            "nationality": "FRA"
+        },
+        {
+            "id": 118,
+            "name": "Xavi Hernandez",
+            "position": "MC",
+            "number": 16,
+            "goalsScored": 4,
+            "yellowCards": 2,
+            "redCards": 0,
+            "birthdate": "1980-01-25",
+            "nationality": "ESP"
+        },
+        {
+            "id": 121,
+            "name": "Ashley Cole",
+            "position": "ED",
+            "number": 23,
+            "goalsScored": 1,
             "yellowCards": 1,
             "redCards": 0,
-            "birthdate": "1991-07-12",
-            "nationality": "COL"
-          }
+            "birthdate": "1980-12-20",
+            "nationality": "ENG"
+        }
       ],
       "manager": {
         "id": 201,

@@ -1,8 +1,8 @@
-.active{
+.inactive{
     background-color: black;
     color: white;
 
-}.inactive{
+}.active{
     background-color: white;
     color: black;
 }

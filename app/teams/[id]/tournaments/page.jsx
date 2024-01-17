@@ -7,7 +7,8 @@ return (
 <>
 
 <div>
-    TournamentPAge
+    <h1>TORNEOS</h1>
+    TournamentPage
 </div>
 
 </>
