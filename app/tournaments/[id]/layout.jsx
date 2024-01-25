@@ -1,39 +1,41 @@
+"use client"
 import Link from "next/link";
-import styles from './tournament.module.css';
-import tournaments from '../../../data/tournaments.data.json';
-import { usePathname } from "next/navigation";
-import TournamentTitle from "./components/TournamentTitle";
+import { usePathname } from 'next/navigation';
 
-const fetchTournament = async() => {
-    return fetch('https://apiv3.apifootball.com/?action=get_standings&league_id=152&APIkey=481770da3abeb3802b4f5fbeafdb2c93faee538ebff7194ba0594a3b81d84fdf')
-    .then(res => res.json())
-}
+import { tournaments } from '../../../data/tournaments.data.json'
+
+import './styles.css'
+import styles from './tournament.module.css';
+
 
 export default function LayoutPage ({ children, params }) {
 
-    
+    const tournament = tournaments.find(element => element.id == "12345678")
+    const router = usePathname()
 
 return (
 <div className={ styles.TournamentDiv}>
-    <TournamentTitle />
+    <h2 className={ styles.tournamentName }>{tournament?.league_name}</h2>
+
 
     <div className={ styles.buttons}>
         <Link href={`/tournaments/${params.id}`}>
-        <div className={ `${styles.TableButton}` }>
+        <div className={ `${styles.button} ${styles.button} ${(router.endsWith('/fixture') || router.endsWith('/teams'))? 'inactive':'active'}` }>
             TABLA
         </div>
         </Link>
         <Link href={`/tournaments/${params.id}/fixture`}>
-        <div className={ `${styles.FixtureButton}` }>
+        <div className={ `${styles.button} ${styles.button} ${router.endsWith('/fixture')? 'active':'inactive'}` }>
             FIXTURE
         </div>
         </Link>
         <Link href={`/tournaments/${params.id}/teams`}>
-        <div className={ `${styles.TeamsButton}` }>
+        <div className={ `${styles.button} ${styles.button} ${router.endsWith('/teams')? 'active':'inactive'}` }>
             EQUIPOS
         </div>
         </Link>
-    </div>{ children }
+    </div>
+    { children }
 </div>
 )
 }

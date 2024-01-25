@@ -1,10 +1,9 @@
-// import { BounceLoader, BarLoader } from 'react-spinners';
 import Image from 'next/image';
-import tournaments from '../../../data/tournaments.data.json';
+import { tournaments } from '../../../data/tournaments.data.json';
 import styles from './tournament.module.css';
 import Link from 'next/link';
 
-const tournament = tournaments['abc']
+const tournament = tournaments.find(tournament => tournament.id == "12345678")
 
 export const metadata = {
   title: `Torneo - ${tournament.name.toUpperCase()}`,
@@ -38,7 +37,7 @@ export default async function TournamentId ({ params }) {
         </thead>
         <tbody className={ styles.tbody }>
           { tournament.slice(0,15).map((team, idx) =>(
-            <tr key={team.name} className={styles.tr}>
+            <tr key={team.id} className={styles.tr}>
               <td className={styles.td}>{idx+1}</td>
               <td className={ styles.td}>
                 <div className={ styles.tD}>

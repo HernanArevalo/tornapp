@@ -11,19 +11,21 @@
   text-overflow: ellipsis;
 }
 
-.TableButton, .FixtureButton, .TeamsButton{
-  background-color: white;
+.button{
   border: none;
   padding: 8px 8px;
   font-size: 15px;
   font-family: "Arial Black", Gadget, sans-serif;
   margin: 10px 0px;
   margin-right: 20px;
-  color: black;
   width: fit-content;
   display: inline-block;
+  transition-duration: .2s;
 }
-
+.button:hover{
+  background-color: rgb(49, 49, 49);
+  color: rgb(172, 172, 172);
+}
 .TournamentDiv{
   padding: 0px 20px;
 
