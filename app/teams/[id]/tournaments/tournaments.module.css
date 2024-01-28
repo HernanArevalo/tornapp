@@ -6,4 +6,52 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 10px;
+    line-height: 15px;
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tournamentTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    margin-bottom: 10px;
+}
+
+.h4{
+    margin: 0;
+    font-size: 23px;
+    line-height: 25px;
+}
+
+.tournamentData{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.playing, .finished{
+    font-weight: 500;
+    font-size: 20px;
+    padding: 5px 10px;
+    width: fit-content;
+
+}
+
+.playing{
+    background-color: #47b155;
+}
+.finished{
+    background-color: #ff6060;
+}
+
+.position{
+    font-weight: 900;
 }
