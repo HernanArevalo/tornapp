@@ -11,7 +11,7 @@
         "classification_teams": 4,
         "relegation": true,
         "relegation_teams": 2,
-        "teams":[
+        "teams":
             [
                 {
                     "country_name": "England",
@@ -773,7 +773,7 @@
                     "fk_stage_key": "6",
                     "stage_name": "Current"
                 }
-            ]
+            
         ],
         "fixture":{ 
             "fechas": [

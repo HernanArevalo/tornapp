@@ -13,7 +13,9 @@
       "pp":7,
       "foundationYear": 1901,
       "maxVictory": "5-0",
-      "maxDefeat": "1-4",
+      "victoryteam": "Velez Sarsfield",
+      "maxDefeat": null,
+      "defeatteam": "Velez Sarsfield",
       "currentStreak": "3 wins",
       "cleanSheets": 12,
       "tournaments": [
@@ -21,17 +23,19 @@
           "tournament_id": 101,
           "name": "Liga Nacional",
           "id": 12345678,
-          "year": 2022,
-          "currentlyPlaying": false,
-          "finalPosition": 2
+          "started": 2022,
+          "finished": 2024,
+          "playing": false,
+          "position": 2
         },
         {
           "tournament_id": 102,
           "name": "Copa Libertadores",
           "id": 12345679,
-          "year": 2023,
-          "currentlyPlaying": true,
-          "finalPosition": 1
+          "started": 2023,
+          "finished": 2024,
+          "playing": true,
+          "position": 1
         }
       ],
       "players": [
@@ -207,7 +211,7 @@
         "id": 201,
         "name": "Enzo Pérez",
         "position": "Head Coach",
-        "nationality": "BRA"
+        "nationality": "URY"
       },
       "matches": [
         {
