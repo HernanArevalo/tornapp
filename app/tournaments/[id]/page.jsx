@@ -28,6 +28,7 @@ export default async function TournamentId ({ params }) {
               <th className={ styles.th }>PG</th>
               <th className={ styles.th }>PE</th>
               <th className={ styles.th }>PP</th>
+              <th className={ styles.th }>DG</th>
               <th className={ styles.th }>PT</th>
             </tr>
         </thead>
@@ -37,14 +38,16 @@ export default async function TournamentId ({ params }) {
               <td className={styles.td}>{idx+1}</td>
               <td className={ styles.td}>
                 <div className={ styles.tD}>
-                  <Image className={styles.teamImg} src={team.team_badge} width="20" height="20"/>
+                  <Image className={styles.teamImg} src={team.team_badge} width="20" height="20" alt=""/>
                   {team.team_name}
                 </div>
               </td>
               <td className={ `${styles.td} ${styles.dataLight}` }>{team.games}</td>
-              <td className={ `${styles.td} ${styles.dataLight}` }>{team.games_lost}</td>
+              <td className={ `${styles.td} ${styles.dataLight}` }>{team.games_won}</td>
               <td className={ `${styles.td} ${styles.dataLight}` }>{team.games_draw}</td>
-              <td className={ `${styles.td} ${styles.dataLight}` }>{team.goals_favor}</td>
+              <td className={ `${styles.td} ${styles.dataLight}` }>{team.games_lost}</td>
+              <td className={ `${styles.td} ${styles.dataLight}` }>{`${((team.goals_favor - team.goals_against) >= 0)? '+':'-'}${Math.abs(team.goals_favor - team.goals_against)}`}</td>
+
               <td className={ styles.td }>{team.points}</td>
             </tr>
           ))}
