@@ -3,7 +3,6 @@ import { teams } from '../../../data/teams.data.json'
 import Flag from 'react-world-flags'
 import Image from 'next/image';
 
-
 const findScorer = (players) => {
 	const player = players.reduce((jugadorActual, jugadorSiguiente) => {
 		return jugadorActual.goalsScored > jugadorSiguiente.goalsScored ? jugadorActual : jugadorSiguiente;
@@ -12,9 +11,18 @@ const findScorer = (players) => {
 	return player
 }
 
-export default function TeamPage () {
+export default async function TeamPage () {
 
-    const team = teams.find(element => element.id == "12345678")
+	const getTeamData = () => {
+		return new Promise(resolve => {
+		  setTimeout(() => {
+			let team = teams.find(element => element.id == "12345678");
+			resolve(team);
+		  }, 5000);
+		});
+	  };
+
+    const team = await getTeamData();
 	const scorer = findScorer (team.players)
 	const lastTournament = team.tournaments[team.tournaments.length -1]
 
@@ -84,16 +92,31 @@ return (
 		<div className={styles.pointsStats}>
 			<div>
 				<span>Máxima Victoria</span>
-				<div className={styles.data}>
-					{team.maxVictory !== null? team.maxVictory : '-'}
+				<div className={`${styles.data} ${styles.matchData}`}>
+					<div>
+					{team.maxVictory !== null? `${team.maxVictory} ` : '-'}
+					<div className={ styles.matchTeam }>
+					({team.victoryteam})
+					</div>
+					</div>
 				</div>
 			</div>
 			<div>
 				<span>Máxima derrota</span>
-				<div className={styles.data}>
-				{team.maxDefeat !== null? team.maxDefeat : '-'}
+				<div className={`${styles.data} ${styles.matchData}`}>
+					{team.maxDefeat !== null? 
+					<div>
+						{team.maxDefeat}
+						<div className={ styles.matchTeam }>
+							({team.defeatteam})
+						</div>					
+					</div>
+					:
+					'-'
+					}
 				</div>
 			</div>
+			
 			
 		</div>
 
@@ -124,14 +147,14 @@ return (
 				<h3 className={styles.data}>{ lastTournament?.name }</h3>
 			</div>
 			<div className={styles.dataLight}>
-				Posición: { lastTournament.finalPosition }°
-				{ lastTournament.currentlyPlaying ?
+				Posición: { lastTournament.position }°
+				{ lastTournament.playing ?
 				<div className={styles.playing}>
-					JUGANDO
+					PLAYING
 				</div>
 				:
 				<div className={styles.finished}>
-					TERMINADO
+					FINISHED
 				</div>
 				}
 			</div>

@@ -72,8 +72,18 @@
     width: 100%;
     grid-template-columns: repeat(3, 25%);
     grid-template-rows: repeat(2, auto);
+    gap: 10px;
     align-items: center;
     justify-content: center;
+    padding: 10px 0px;
+}
+
+.matchesStats > div{
+    background-color: black;
+}
+
+.matchesStats > :first-child {
+    color: white;
 }
 
 .matchesStat {
@@ -131,7 +141,15 @@
     font-weight: 800;
     font-size: 20px;
     line-height: 15px;
+}
 
+.matchData{
+    letter-spacing: 7px;
+}
+.matchTeam{
+    letter-spacing: normal;
+    font-weight: 500;
+    font-size: 15px;
 }
 .dataLight{
     display: flex;
