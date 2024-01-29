@@ -41,11 +41,11 @@ export default async function TournamentId ({ params }) {
                   {team.team_name}
                 </div>
               </td>
-              <td className={ styles.td }>{team.overall_league_payed}</td>
-              <td className={ styles.td }>{team.overall_league_W}</td>
-              <td className={ styles.td }>{team.overall_league_D}</td>
-              <td className={ styles.td }>{team.overall_league_L}</td>
-              <td className={ styles.td }>{team.overall_league_PTS}</td>
+              <td className={ `${styles.td} ${styles.dataLight}` }>{team.games}</td>
+              <td className={ `${styles.td} ${styles.dataLight}` }>{team.games_lost}</td>
+              <td className={ `${styles.td} ${styles.dataLight}` }>{team.games_draw}</td>
+              <td className={ `${styles.td} ${styles.dataLight}` }>{team.goals_favor}</td>
+              <td className={ styles.td }>{team.points}</td>
             </tr>
           ))}
         </tbody>

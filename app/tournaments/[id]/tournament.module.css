@@ -60,8 +60,12 @@
   height: 100%;
   overflow: hidden;
   max-width: 170px;
-
 }
+
+.dataLight{
+  font-weight: 400;
+}
+
 .tr{
   height: 30px;
   border-spacing: 5px 1rem;
