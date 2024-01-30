@@ -26,7 +26,14 @@
           "started": 2022,
           "finished": 2024,
           "playing": false,
-          "position": 2
+          "position": 16,
+          "games": 21,
+          "games_won": 14,
+          "games_lost": 1,
+          "games_draw": 6,
+          "goals_favor": 47,
+          "goals_against": 18,
+          "points": 48
         },
         {
           "tournament_id": 102,
@@ -35,7 +42,14 @@
           "started": 2023,
           "finished": 2024,
           "playing": true,
-          "position": 1
+          "position": 1,
+          "games": 5,
+          "games_won": 2,
+          "games_lost": 0,
+          "games_draw": 3,
+          "goals_favor": 5,
+          "goals_against": 6,
+          "points": 6
         }
       ],
       "players": [
