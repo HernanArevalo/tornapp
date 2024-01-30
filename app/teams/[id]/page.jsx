@@ -18,7 +18,7 @@ export default async function TeamPage () {
 		  setTimeout(() => {
 			let team = teams.find(element => element.id == "12345678");
 			resolve(team);
-		  }, 5000);
+		  }, 0);
 		});
 	  };
 
@@ -36,15 +36,15 @@ return (
 	</div >
 	<div className={styles.teamContent2}>
 		<div>
-			<span>Ubicación</span>
+			<span>Ubicación:</span>
 			<div className={styles.data}>{team.location}</div>
 		</div>
 		<div>
-			<span>Fundación</span>
+			<span>Fundación:</span>
 			<div className={styles.data}>{team.foundation}</div>
 		</div>
 		<div>
-			<span>Desempeño</span>
+			<span>Desempeño:</span>
 			<div className={styles.matchesStats}>
 				<div className={styles.matchesStat}>
 					<span>PJ</span>
@@ -72,7 +72,7 @@ return (
 		</div>
 		<div className={styles.pointsStats}>
 			<div>
-				<span>Puntos obtenidos</span>
+				<span>Puntos obtenidos:</span>
 				<div className={styles.data}>
 					<div>{team.pg*3+team.pe}</div>
 					<div>/</div>
@@ -80,7 +80,7 @@ return (
 				</div>
 			</div>
 			<div>
-				<span>Porcentaje victoria</span>
+				<span>Porcentaje victoria:</span>
 				<div className={styles.data}>
 					<div>{parseFloat( (team.pg*3+team.pe)*100/(team.pj*3)).toFixed(2)}</div>
 					<div>%</div>
@@ -91,7 +91,7 @@ return (
 
 		<div className={styles.pointsStats}>
 			<div>
-				<span>Máxima Victoria</span>
+				<span>Máxima Victoria:</span>
 				<div className={`${styles.data} ${styles.matchData}`}>
 					<div>
 					{team.maxVictory !== null? `${team.maxVictory} ` : '-'}
@@ -102,7 +102,7 @@ return (
 				</div>
 			</div>
 			<div>
-				<span>Máxima derrota</span>
+				<span>Máxima derrota:</span>
 				<div className={`${styles.data} ${styles.matchData}`}>
 					{team.maxDefeat !== null? 
 					<div>
@@ -122,7 +122,7 @@ return (
 
 		{team.manager.name &&	
 		<div className={styles.player}>
-			<span>Director Técnico</span>
+			<span>Director Técnico:</span>
 			<div>
 				<h3  className={styles.data}>{team.manager.name}</h3>
 				<Flag code={team.manager.nationality} height="16" />
@@ -131,7 +131,7 @@ return (
 		}
 		{scorer.goalsScored > 0 &&	
 		<div className={styles.player}>
-			<span>Goleador Actual</span>
+			<span>Goleador Actual:</span>
 			<div>
 				<h3 className={styles.data}>{ scorer.name }</h3>
 				<Flag code={scorer.nationality} height="16" />
@@ -142,7 +142,7 @@ return (
 		}
 		{lastTournament &&	
 		<div className={styles.lastTournament}>
-			<span>Último torneo</span>
+			<span>Último torneo:</span>
 			<div>
 				<h3 className={styles.data}>{ lastTournament?.name }</h3>
 			</div>

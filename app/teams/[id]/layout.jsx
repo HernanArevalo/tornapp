@@ -1,14 +1,14 @@
 "use client"
 import Link from 'next/link'
 import styles from './team.module.css'
-import { teams } from '../../../data/teams.data.json'
+import teamsData from '../../../data/teams.data.json'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import './styles.css'
 
 export default function LayoutPage ({ children, params }) {
 
-    const team = teams.find(element => element.id == "12345678")
+    const team = teamsData.teams.find(element => element.id == "12345678")
     const router = usePathname()
 
 return (
