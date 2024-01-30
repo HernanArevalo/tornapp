@@ -1,0 +1,62 @@
+
+.loadingcontainer{
+    width: 100%;
+    min-height: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadership_GHMVN {
+    display: flex;
+    position: relative;
+    width: 122px;
+    height: 67px;
+  }
+
+  .loadership_GHMVN div {
+    position: absolute;
+    top: 50px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-image: url('/ball.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: loadership_GHMVN_bounce 2.40s infinite;
+    animation-timing-function: linear;
+  }
+
+  .loadership_GHMVN div:nth-child(1) {
+        animation-delay: 0.00s;
+        left: 0px;
+    }
+.loadership_GHMVN div:nth-child(2) {
+        animation-delay: 0.40s;
+        left: 35px;
+    }
+.loadership_GHMVN div:nth-child(3) {
+        animation-delay: 0.80s;
+        left: 70px;
+    }
+.loadership_GHMVN div:nth-child(4) {
+        animation-delay: 1.20s;
+        left: 105px;
+    }
+
+
+  @keyframes loadership_GHMVN_bounce {
+    0%, 13.333333333333332%, 33.33333333333333%, 53.33333333333333%, 66.66666666666666%, 100% {
+      transform: translateY(0);
+    }
+  
+    26.666666666666664% {
+      transform: translateY(-50px);
+    }
+  
+    40% {
+      transform: translateY(-20px);
+    }
+  }
