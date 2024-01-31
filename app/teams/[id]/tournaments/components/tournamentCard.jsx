@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from '../tournaments.module.css'
 
 
-export const TournamentCard = ({tournament, team}) => {
+export default function TournamentCard ({tournament, team}) {
 
     
 return (

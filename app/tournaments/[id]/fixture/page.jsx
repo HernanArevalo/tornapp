@@ -1,7 +1,6 @@
-
-import { tournaments } from '../../../../data/tournaments.data.json';
-import styles from './fixture.module.css'
+import tournamentsData from '../../../../data/tournaments.data.json';
 import MatchResume from '../../components/MatchResume';
+import styles from './fixture.module.css'
 
 
 const fetchTournament = async() => {
@@ -12,7 +11,7 @@ const fetchTournament = async() => {
 
 export default function FixturePage ({ params }) {
       
-    const tournament = tournaments.find(element => element.id == "12345678")
+    const tournament = tournamentsData.tournaments.find(element => element.id == "12345678")
 
 return (
 <div>
