@@ -1,5 +1,6 @@
 import tournamentsData from '../../../../data/tournaments.data.json';
 import MatchResume from '../../components/MatchResume';
+
 import styles from './fixture.module.css'
 
 
