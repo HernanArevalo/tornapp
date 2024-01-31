@@ -1,7 +1,7 @@
 import teamsData from '../../../../data/teams.data.json'
-import TournamentCard from './TournamentCard'
+import TournamentCard from './components/TournamentCard'
 
-export default function TournamentPAge() {
+export default function TournamentPage() {
 
     const team = teamsData.teams.find(element => element.id == "12345678")
 
