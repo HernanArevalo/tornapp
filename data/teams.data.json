@@ -33,7 +33,15 @@
           "games_draw": 6,
           "goals_favor": 47,
           "goals_against": 18,
-          "points": 48
+          "points": 48,
+          "last_match": {
+            "team_1": "POWER CA",
+            "team_2": "Rangers FC",
+            "score_team_1": 3,
+            "score_team_2": 2,
+            "date": "25/02/2024"
+            
+          }
         },
         {
           "tournament_id": 102,
@@ -49,7 +57,14 @@
           "games_draw": 3,
           "goals_favor": 5,
           "goals_against": 6,
-          "points": 6
+          "points": 6,
+          "last_match": {
+            "team_1": "Rangers FC",
+            "team_2": "Power CA",
+            "score_team_1": 0,
+            "score_team_2": 1,
+            "date": "10/11/2023"
+          }
         }
       ],
       "players": [
