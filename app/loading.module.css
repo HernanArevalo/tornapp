@@ -16,7 +16,7 @@
     height: 60px;
   }
 
-  .loadership_ZHTYC div {
+  .loadership_ZHTYC .div {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -25,47 +25,47 @@
     animation-timing-function: ease-in-out;
   }
   
-  .loadership_ZHTYC div:nth-child(1) {
+  .loadership_ZHTYC .div:nth-child(1) {
       animation-delay: 0.00s;
       top: 0px;
       left: 0px;
     }
-.loadership_ZHTYC div:nth-child(2) {
+.loadership_ZHTYC .div:nth-child(2) {
       animation-delay: 0.15s;
       top: 0px;
       left: 20px;
     }
-.loadership_ZHTYC div:nth-child(3) {
+.loadership_ZHTYC .div:nth-child(3) {
       animation-delay: 0.30s;
       top: 0px;
       left: 40px;
     }
-.loadership_ZHTYC div:nth-child(4) {
+.loadership_ZHTYC .div:nth-child(4) {
       animation-delay: 0.15s;
       top: 20px;
       left: 0px;
     }
-.loadership_ZHTYC div:nth-child(5) {
+.loadership_ZHTYC .div:nth-child(5) {
       animation-delay: 0.30s;
       top: 20px;
       left: 20px;
     }
-.loadership_ZHTYC div:nth-child(6) {
+.loadership_ZHTYC .div:nth-child(6) {
       animation-delay: 0.45s;
       top: 20px;
       left: 40px;
     }
-.loadership_ZHTYC div:nth-child(7) {
+.loadership_ZHTYC .div:nth-child(7) {
       animation-delay: 0.30s;
       top: 40px;
       left: 0px;
     }
-.loadership_ZHTYC div:nth-child(8) {
+.loadership_ZHTYC .div:nth-child(8) {
       animation-delay: 0.45s;
       top: 40px;
       left: 20px;
     }
-.loadership_ZHTYC div:nth-child(9) {
+.loadership_ZHTYC .div:nth-child(9) {
       animation-delay: 0.60s;
       top: 40px;
       left: 40px;

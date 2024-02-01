@@ -113,3 +113,12 @@
   background-color: #FFC5C5;
 
 }
+
+.inactive{
+  background-color: black;
+  color: white;
+
+}.active{
+  background-color: white;
+  color: black;
+}

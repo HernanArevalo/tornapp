@@ -203,3 +203,12 @@
 .finished{
     background-color: #ff6060;
 }
+
+.inactive{
+    background-color: black;
+    color: white;
+
+}.active{
+    background-color: white;
+    color: black;
+}

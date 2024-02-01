@@ -1,10 +1,9 @@
-"use client"
+'use client'
 import Link from 'next/link'
 import styles from './team.module.css'
 import teamsData from '../../../data/teams.data.json'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import './styles.css'
 
 export default function LayoutPage ({ children, params }) {
 
@@ -20,17 +19,17 @@ return (
 
     <div className={ styles.buttons}>
         <Link href={`/teams/${params.id}`}>
-        <div className={ `${styles.button} ${(router.endsWith('/players') || router.endsWith('/tournaments'))? 'inactive':'active'}` }>
+        <div className={ `${styles.button} ${(router.endsWith('/players') || router.endsWith('/tournaments'))? styles.inactive:styles.active}` }>
             GENERAL
         </div>
         </Link>
         <Link href={`/teams/${params.id}/players`}>
-        <div className={ `${styles.button} ${router.endsWith('/players')? 'active':'inactive'}` }>
+        <div className={ `${styles.button} ${router.endsWith('/players')? styles.active:styles.inactive}` }>
             JUGADORES
         </div>
         </Link>
         <Link href={`/teams/${params.id}/tournaments`}>
-        <div className={ `${styles.button} ${router.endsWith('/tournaments')? 'active':'inactive'}` }>
+        <div className={ `${styles.button} ${router.endsWith('/tournaments')? styles.active:styles.inactive}` }>
             TORNEOS
         </div>
         </Link>

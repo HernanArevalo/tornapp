@@ -4,12 +4,13 @@ import { usePathname } from 'next/navigation';
 
 import { tournaments } from '../../../data/tournaments.data.json'
 
-import './styles.css'
 import styles from './tournament.module.css';
 
 
 export default function LayoutPage ({ children, params }) {
 
+
+    
     const tournament = tournaments.find(element => element.id == "12345678")
     const router = usePathname()
 
@@ -20,17 +21,17 @@ return (
 
     <div className={ styles.buttons}>
         <Link href={`/tournaments/${params.id}`}>
-        <div className={ `${styles.button} ${styles.button} ${(router.endsWith('/fixture') || router.endsWith('/teams'))? 'inactive':'active'}` }>
+        <div className={ `${styles.button} ${styles.button} ${(router.endsWith('/fixture') || router.endsWith('/teams'))? styles.inactive:styles.active}` }>
             TABLA
         </div>
         </Link>
         <Link href={`/tournaments/${params.id}/fixture`}>
-        <div className={ `${styles.button} ${styles.button} ${router.endsWith('/fixture')? 'active':'inactive'}` }>
+        <div className={ `${styles.button} ${styles.button} ${router.endsWith('/fixture')? styles.active:styles.inactive}` }>
             FIXTURE
         </div>
         </Link>
         <Link href={`/tournaments/${params.id}/teams`}>
-        <div className={ `${styles.button} ${styles.button} ${router.endsWith('/teams')? 'active':'inactive'}` }>
+        <div className={ `${styles.button} ${styles.button} ${router.endsWith('/teams')? styles.active:styles.inactive}` }>
             EQUIPOS
         </div>
         </Link>

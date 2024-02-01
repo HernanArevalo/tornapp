@@ -1,5 +1,6 @@
 import styles from './Home.module.css'
 import data from '../data/teams.data.json'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Tornapp',
@@ -21,7 +22,7 @@ export default function Home () {
         <h2>Mi Equipo</h2>
         <div className={ styles.myTeams}>
           <div className={ styles.teamData }>
-            <img src={team.logo_path} alt="team logo"/>
+            <Image src={team.logo_path} alt="team logo" width={64} height={64}/>
             <h3 className={ styles.h3 }> { team.name } </h3>
             <span className={ styles.h3 }> { team.founded } </span>
           </div>
