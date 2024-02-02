@@ -1,7 +1,15 @@
 import Image from 'next/image';
 import { tournaments } from '../../../data/tournaments.data.json';
 import styles from './tournament.module.css';
-import Link from 'next/link';
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "../../components/ui/table"
 
 const tournament = tournaments.find(tournament => tournament.id == "12345678")
 
@@ -19,40 +27,39 @@ export default async function TournamentId ({ params }) {
   
   return (
     <>
-      <table className={ styles.table}>
-        <thead className={ styles.thead}>
-            <tr className={ styles.tr}>
-              <th className={ styles.th }></th>
-              <th className={ styles.th }>EQUIPOS</th>
-              <th className={ styles.th }>PJ</th>
-              <th className={ styles.th }>PG</th>
-              <th className={ styles.th }>PE</th>
-              <th className={ styles.th }>PP</th>
-              <th className={ styles.th }>DG</th>
-              <th className={ styles.th }>PT</th>
-            </tr>
-        </thead>
-        <tbody className={ styles.tbody }>
+      <Table className='text-3xl font-bold underline'>
+        <TableHeader>
+            <TableRow>
+              <TableHead></TableHead>
+              <TableHead>EQUIPOS</TableHead>
+              <TableHead>PJ</TableHead>
+              <TableHead>PG</TableHead>
+              <TableHead>PE</TableHead>
+              <TableHead>PP</TableHead>
+              <TableHead>DG</TableHead>
+              <TableHead>PT</TableHead>
+            </TableRow>
+        </TableHeader>
+        <TableBody >
           { tournament.teams.slice(0,15).map((team, idx) =>(
-            <tr key={team.id} className={styles.tr}>
-              <td className={styles.td}>{idx+1}</td>
-              <td className={ styles.td}>
-                <div className={ styles.tD}>
-                  <Image className={styles.teamImg} src={team.team_badge} width="20" height="20" alt=""/>
-                  {team.team_name}
+            <TableRow key={team.id} >
+              <TableCell >{idx+1}</TableCell>
+              <TableCell >
+                <div >
+                  <Image src={team.team_badge} width="20" height="20" alt=""/>{team.team_name}
                 </div>
-              </td>
-              <td className={ `${styles.td} ${styles.dataLight}` }>{team.games}</td>
-              <td className={ `${styles.td} ${styles.dataLight}` }>{team.games_won}</td>
-              <td className={ `${styles.td} ${styles.dataLight}` }>{team.games_draw}</td>
-              <td className={ `${styles.td} ${styles.dataLight}` }>{team.games_lost}</td>
-              <td className={ `${styles.td} ${styles.dataLight}` }>{`${((team.goals_favor - team.goals_against) >= 0)? '+':'-'}${Math.abs(team.goals_favor - team.goals_against)}`}</td>
+              </TableCell>
+              <TableCell>{team.games}</TableCell>
+              <TableCell>{team.games_won}</TableCell>
+              <TableCell>{team.games_draw}</TableCell>
+              <TableCell>{team.games_lost}</TableCell>
+              <TableCell>{`${((team.goals_favor - team.goals_against) >= 0)? '+':'-'}${Math.abs(team.goals_favor - team.goals_against)}`}</TableCell>
 
-              <td className={ styles.td }>{team.points}</td>
-            </tr>
+              <TableCell>{team.points}</TableCell>
+            </TableRow>
           ))}
-        </tbody>
-      </table>
+        </TableBody>
+      </Table>
 
       {/* <BarLoader color="#36d7b7" />
       <BounceLoader
