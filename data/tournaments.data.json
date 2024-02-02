@@ -277,91 +277,226 @@
         ],
         "fixture":{ 
             "fechas": [
+                {
+                  "number": "1",
+                  "matches": [
                     {
-                        "number": "1",
-                        "matches":[
-                            {
-                            "id": 21323,
-                            "date": "24/12/2023",
-                            "hour": "00:00",
-                            "localteam": "Bournemouth",
-                            "localteamID": 28,
-                            "localteam_badge": "https://apiv3.apifootball.com/badges/3071_afc-bournemouth.jpg",
-                            "visitorteam": "Fulham",
-                            "visitorteam_badge": "https://apiv3.apifootball.com/badges/3085_fulham.jpg",
-                            "visitorteamID": 43,
-                            "result": null,
-                            "localteam_score": 5,
-                            "visitorteam_score": 1,
-                            "events":{
-                                "goals":{
-                                    "6":{
-                                        "player": "Sandra Perez",
-                                        "penalty": false
-                                    },
-                                    "26":{
-                                        "player": "Sandra Perez",
-                                        "penalty": true
-                                    }
-                                },
-                                "cards":{
-                                    "7":{
-                                        "player": "Sandra Perez",
-                                        "red": false
-                                    },
-                                    "26":{
-                                        "player": "Sandra Perez",
-                                        "red": true
-                                    }
-    
-                                },
-                                "others":{
-    
-                                }
-                            }
-                            },
-                            {
-                                "id": 21324,
-                                "date": "24/12/2023",
-                                "hour": "23:00",
-                                "localteam": "Aston Villa",
-                                "localteamID": 28,
-                                "localteam_badge": "https://apiv3.apifootball.com/badges/3088_aston-villa.jpg",
-                                "visitorteam": "Crystal Palace",
-                                "visitorteam_badge": "https://apiv3.apifootball.com/badges/3429_crystal-palace.jpg",
-                                "visitorteamID": 43,
-                                "result": null,
-                                "localteam_score": 10,
-                                "visitorteam_score": 10,
-                                "events":{
-                                    "goals":{
-                                        "6":{
-                                            "player": "Sandra Perez",
-                                            "penalty": false
-                                        },
-                                        "26":{
-                                            "player": "Sandra Perez",
-                                            "penalty": true
-                                        }
-                                    },
-                                    "cards":{
-                                        "7":{
-                                            "player": "Sandra Perez",
-                                            "red": false
-                                        },
-                                        "26":{
-                                            "player": "Sandra Perez",
-                                            "red": true
-                                        }
-        
-                                    },
-                                    "others":{
-        
-                                    }
-                                }
-                                }
-                        ]
+                      "id": 21323,
+                      "date": "01/01/2024",
+                      "hour": "18:30",
+                      "localteam": "Liverpool",
+                      "localteamID": "84",
+                      "localteam_badge": "https://apiv3.apifootball.com/badges/84_liverpool.jpg",
+                      "visitorteam": "Manchester City",
+                      "visitorteamID": "80",
+                      "visitorteam_badge": "https://apiv3.apifootball.com/badges/80_manchester-city.jpg",
+                      "result": {
+                        "localteam_score": 2,
+                        "visitorteam_score": 1
+                      },
+                      "events": {
+                        "goals": {
+                          "10": {
+                            "player": "John Doe",
+                            "penalty": false
+                          },
+                          "35": {
+                            "player": "Jane Smith",
+                            "penalty": true
+                          }
+                        },
+                        "cards": {
+                          "20": {
+                            "player": "John Doe",
+                            "red": false
+                          },
+                          "55": {
+                            "player": "Jane Smith",
+                            "red": true
+                          }
+                        },
+                        "others": {
+                          "60": {
+                            "description": "Substitución",
+                            "player_in": "Alice Johnson",
+                            "player_out": "John Doe"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": 21324,
+                      "date": "02/01/2024",
+                      "hour": "19:45",
+                      "localteam": "Arsenal",
+                      "localteamID": "141",
+                      "localteam_badge": "https://apiv3.apifootball.com/badges/141_arsenal.jpg",
+                      "visitorteam": "Aston Villa",
+                      "visitorteamID": "3088",
+                      "visitorteam_badge": "https://apiv3.apifootball.com/badges/3088_aston-villa.jpg",
+                      "result": {
+                        "localteam_score": 3,
+                        "visitorteam_score": 2
+                      },
+                      "events": {
+                        "goals": {
+                          "15": {
+                            "player": "Michael Johnson",
+                            "penalty": false
+                          },
+                          "50": {
+                            "player": "David Williams",
+                            "penalty": true
+                          }
+                        },
+                        "cards": {
+                          "30": {
+                            "player": "Michael Johnson",
+                            "red": false
+                          },
+                          "65": {
+                            "player": "David Williams",
+                            "red": true
+                          }
+                        },
+                        "others": {
+                          "70": {
+                            "description": "Substitución",
+                            "player_in": "Bob Brown",
+                            "player_out": "Michael Johnson"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": 21325,
+                      "date": "02/01/2024",
+                      "hour": "21:00",
+                      "localteam": "Tottenham",
+                      "localteamID": "164",
+                      "localteam_badge": "https://apiv3.apifootball.com/badges/164_tottenham-hotspur.jpg",
+                      "visitorteam": "West Ham",
+                      "visitorteamID": "3081",
+                      "visitorteam_badge": "https://apiv3.apifootball.com/badges/3081_west-ham-united.jpg",
+                      "result": {
+                        "localteam_score": 1,
+                        "visitorteam_score": 1
+                      },
+                      "events": {
+                        "goals": {
+                          "20": {
+                            "player": "Alex Turner",
+                            "penalty": false
+                          },
+                          "75": {
+                            "player": "Chris Harris",
+                            "penalty": true
+                          }
+                        },
+                        "cards": {
+                          "25": {
+                            "player": "Alex Turner",
+                            "red": false
+                          },
+                          "80": {
+                            "player": "Chris Harris",
+                            "red": true
+                          }
+                        },
+                        "others": {
+                          "85": {
+                            "description": "Substitución",
+                            "player_in": "Charlie Davis",
+                            "player_out": "Alex Turner"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": 21326,
+                      "date": "03/01/2024",
+                      "hour": "20:15",
+                      "localteam": "Brighton",
+                      "localteamID": "3079",
+                      "localteam_badge": "https://apiv3.apifootball.com/badges/3079_brighton--hove-albion.jpg",
+                      "visitorteam": "Manchester Utd",
+                      "visitorteamID": "102",
+                      "visitorteam_badge": "https://apiv3.apifootball.com/badges/102_manchester-united.jpg",
+                      "result": {
+                        "localteam_score": 0,
+                        "visitorteam_score": 2
+                      },
+                      "events": {
+                        "goals": {
+                          "30": {
+                            "player": "Paul White",
+                            "penalty": false
+                          },
+                          "85": {
+                            "player": "Ryan Green",
+                            "penalty": true
+                          }
+                        },
+                        "cards": {
+                          "40": {
+                            "player": "Paul White",
+                            "red": false
+                          },
+                          "85": {
+                            "player": "Ryan Green",
+                            "red": true
+                          }
+                        },
+                        "others": {
+                          "45": {
+                            "description": "Substitución",
+                            "player_in": "Charlie Brown",
+                            "player_out": "Paul White"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": 21327,
+                      "date": "03/01/2024",
+                      "hour": "21:30",
+                      "localteam": "Manchester City",
+                      "localteamID": "80",
+                      "localteam_badge": "https://apiv3.apifootball.com/badges/80_manchester-city.jpg",
+                      "visitorteam": "Chelsea",
+                      "visitorteamID": "88",
+                      "visitorteam_badge": "https://apiv3.apifootball.com/badges/88_chelsea.jpg",
+                      "result": {
+                        "localteam_score": 3,
+                        "visitorteam_score": 1
+                      },
+                      "events": {
+                        "goals": {
+                          "15": {
+                            "player": "John Johnson",
+                            "penalty": false
+                          },
+                          "50": {
+                            "player": "Jane Davis",
+                            "penalty": true
+                          }
+                        },
+                        "cards": {
+                          "25": {
+                            "player": "John Johnson",
+                            "red": false
+                          },
+                          "55": {
+                            "player": "Jane Davis",
+                            "red": true
+                          }
+                        },
+                        "others": {
+                        }
+                      }
                     }
+                  ]}
+                
             ]
             
                 
