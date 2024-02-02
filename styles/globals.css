@@ -59,3 +59,55 @@
     @apply bg-background text-foreground;
   }
 }
+
+body{
+  background-image: 
+  radial-gradient(#1a1a1a 2px,  black  2px),
+  radial-gradient(black 2px, #3a3a3a 2px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+a{
+cursor: pointer;
+text-decoration: none;
+width: fit-content;
+}
+
+main{
+  background-color: #403d39;
+  opacity: 1;
+  background: linear-gradient(135deg, #25242255 25%, transparent 25%) -14px 0/ 28px 28px, linear-gradient(225deg, #252422 25%, transparent 25%) -14px 0/ 28px 28px, linear-gradient(315deg, #25242255 25%, transparent 25%) 0px 0/ 28px 28px, linear-gradient(45deg, #252422 25%, #403d39 25%) 0px 0/ 28px 28px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+
+}
+
+h1, h2, h3, h4, h5{
+  margin: 0;
+}
+
+@media (min-width: 500px){
+  main {
+  height: 90vh;
+  width: 450px;
+
+  }
+}

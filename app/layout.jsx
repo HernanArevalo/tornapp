@@ -1,5 +1,5 @@
 import { Kanit } from 'next/font/google'
-import NavbarPage from './componens/Navbar'
+import NavbarPage from './components/ui/Navbar'
 import '../styles/globals.css'
 
 const inter = Kanit({ 
