@@ -2,21 +2,19 @@
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 
-import { tournaments } from '../../../data/tournaments.data.json'
+import tournamentsData from '../../../data/tournaments.data.json'
 
 import styles from './tournament.module.css';
 
 
 export default function LayoutPage ({ children, params }) {
 
-
-    
-    const tournament = tournaments.find(element => element.id == "12345678")
+    const tournament = tournamentsData.tournaments.find(element => element.id == "12345678")
     const router = usePathname()
 
 return (
 <div className={ styles.TournamentDiv}>
-    <h2 className={ styles.tournamentName }>{tournament?.league_name}</h2>
+    <h2 className={ styles.tournamentName }>{tournament.name}</h2>
 
 
     <div className={ styles.buttons}>
