@@ -9,9 +9,19 @@ const fetchTournament = async() => {
     .then(res => res.json())
   }
 
+function sortMatchesByTime(matches) {
+const sortedMatches = matches.sort((a, b) => {
+    const timeA = new Date(`01/01/2024 ${a.hour}`);
+    const timeB = new Date(`01/01/2024 ${b.hour}`);
+    return timeA - timeB;
+});
+
+return sortedMatches;
+}
+
 
 export default function FixturePage ({ params }) {
-      
+
     const tournament = tournamentsData.tournaments.find(element => element.id == "12345678")
 
 return (
@@ -24,7 +34,7 @@ return (
             FECHA {fecha.number}
         </div>
         <div className={ styles.matches }>
-        { fecha.matches.map(match => (
+        { sortMatchesByTime(fecha.matches).map(match => (
             <MatchResume key={match.id} match={match}/>
         ))
 
