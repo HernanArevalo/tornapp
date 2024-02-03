@@ -17,9 +17,9 @@ return (
     </div>
 
     <div className={ styles.goals }>
-        { match.localteam_score }
+        { match.result.localteam_score }
         <span>|</span>
-        { match.visitorteam_score }
+        { match.result.visitorteam_score }
     </div>
 
     <div className={ styles.teamB }>
