@@ -23,8 +23,7 @@ const fetchTournament = async() => {
 }
 
 export default async function TournamentId ({ params }) {
-  
-  return (
+return (
     <>
       <Table className={`text-3xl font-bold underline`}>
         <TableHeader>
