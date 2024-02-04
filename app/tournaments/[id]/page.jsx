@@ -25,7 +25,7 @@ const fetchTournament = async() => {
 export default async function TournamentId ({ params }) {
 return (
     <>
-      <Table className={`text-3xl font-bold underline`}>
+      <Table className={`text-l font-bold`}>
         <TableHeader>
             <TableRow>
               <TableHead></TableHead>
@@ -44,7 +44,7 @@ return (
               <TableCell >{idx+1}</TableCell>
               <TableCell >
                 <div >
-                  <Image src={team.team_badge} width="20" height="20" alt=""/>{team.team_name}
+                  <Image className="text-right" src={team.team_badge} width="20" height="20" alt=""/>{team.team_name}
                 </div>
               </TableCell>
               <TableCell>{team.games}</TableCell>
