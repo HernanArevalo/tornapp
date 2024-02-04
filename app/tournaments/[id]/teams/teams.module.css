@@ -1,0 +1,22 @@
+.teams_list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+}
+.team_container{
+    background-color: white;
+    color: black;
+    padding: 10px;
+
+}
+
+.teamData{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-left: 0px;
+    gap: 30px;
+    width: 100%;
+}
