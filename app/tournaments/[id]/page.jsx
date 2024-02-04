@@ -14,7 +14,7 @@ const fetchTournament = async() => {
   .then(res => res.json())
 }
 
-export default async function TournamentId ({ params }) {
+export default async function TournamentId (params) {
   
   return (
     <>
@@ -38,7 +38,7 @@ export default async function TournamentId ({ params }) {
               <td className={ styles.td}>
                 <div className={ styles.tD}>
                   <Image className={styles.teamImg} src={team.team_badge} width="20" height="20" alt=""/>
-                  {team.team_name}
+                  {team.name}
                 </div>
               </td>
               <td className={ `${styles.td} ${styles.dataLight}` }>{team.games}</td>

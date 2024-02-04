@@ -1,4 +1,4 @@
-import styles from './Home.module.css'
+import styles from './home.module.css'
 import data from '../data/teams.data.json'
 import Image from 'next/image'
 
