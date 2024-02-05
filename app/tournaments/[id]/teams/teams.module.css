@@ -3,20 +3,84 @@
     flex-direction: column;
     gap: 20px;
     padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.teamLink{
+    width: 100%;
 }
 .team_container{
     background-color: white;
     color: black;
-    padding: 10px;
-
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+.team_name{
+    font-size: 22px;
 }
 
 .teamData{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: start;
     padding-left: 0px;
-    gap: 30px;
+    gap: 15px;
     width: 100%;
+}
+
+.teamStats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.games{
+    display: flex;
+    flex-direction: column;
+}
+
+.stat_title{
+    border-bottom: 2px solid black;
+    text-align: center;
+    font-weight: 700;
+}
+.stat{
+    text-align: center;
+}
+
+.pointsStats{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.data{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 15px;
+}
+
+.matchData{
+    letter-spacing: 7px;
+}
+
+.pointStatsChildren{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pointStatsTitle{
+    line-height: 15px;
 }
