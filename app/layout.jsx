@@ -1,6 +1,6 @@
 import { Kanit } from 'next/font/google'
 import '@/styles/globals.css'
-import Navbar from '@/components/Navbar'
+import Navbar from 'components/Navbar'
 
 const inter = Kanit({ 
   subsets: ['latin'],
