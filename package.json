@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tailwind:build": "tailwindcss build -o ./styles/tailwind.css"
   },
   "dependencies": {
     "next": "14.0.3",
@@ -18,8 +19,11 @@
     "react-world-flags": "^1.6.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.17",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
-    "standard": "^17.1.0"
+    "postcss": "^8.4.33",
+    "standard": "^17.1.0",
+    "tailwindcss": "^3.4.1"
   }
 }
