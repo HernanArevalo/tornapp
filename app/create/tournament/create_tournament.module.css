@@ -1,0 +1,14 @@
+.container{
+    padding: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    height: 30px;
+    width: 70%;
+    border: none;
+    box-shadow: none;
+}
