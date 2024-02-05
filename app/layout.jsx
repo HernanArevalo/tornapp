@@ -1,6 +1,6 @@
 import { Kanit } from 'next/font/google'
-import NavbarPage from './componens/Navbar'
-import '../styles/globals.css'
+import '@/styles/globals.css'
+import Navbar from '@/components/Navbar'
 
 const inter = Kanit({ 
   subsets: ['latin'],
@@ -18,7 +18,7 @@ export default function RootLayou ({ children }) {
     <html lang='en'>
       <body className={inter.className}>
         <main>
-          <NavbarPage />
+          <Navbar />
           {children}
         </main>
       </body>
