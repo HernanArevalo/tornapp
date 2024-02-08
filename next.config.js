@@ -10,6 +10,14 @@ const nextConfig = {
           protocol: 'https',
           hostname: 'cdn.sportmonks.com',
         },
+        {
+          protocol: 'https',
+          hostname: 'i.imgur.com',
+        },
+        {
+          protocol: 'https',
+          hostname: 'res.cloudinary.com',
+        },
       ],
     },
   }

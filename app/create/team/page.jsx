@@ -11,6 +11,8 @@ import { Button,
         } from "@/components/ui"
 
 import styles from './create_team.module.css';
+import { useState } from "react";
+import Image from "next/image";
 
 // export const metadata = {
 //     title: 'Crear Equipo - TornApp',
@@ -19,7 +21,38 @@ import styles from './create_team.module.css';
 
 export default function CreateTeamPage () {
 
+    const [badgeUrl, setBadgeUrl] = useState("https://res.cloudinary.com/dabmixcta/image/upload/v1707365070/tornapp/wb13hhynskcyr5m0dgxb.png")
 
+
+    const uploadBadge = async ({target}) =>{
+        if( target.files === 0 ) return;
+
+        const cloudUrl = 'https://api.cloudinary.com/v1_1/dabmixcta/image/upload';
+
+        const formData = new FormData();
+        formData.append('upload_preset','tornapp');
+        formData.append('file', target.files[0] );
+
+        try {
+    
+            const resp = await fetch( cloudUrl, {
+                method: 'POST',
+                body: formData
+            });
+
+
+            if ( !resp.ok ) throw new Error('No se pudo subir imagen')
+            const cloudResp = await resp.json();
+
+            setBadgeUrl( cloudResp.secure_url )
+
+        } catch (error) {
+            console.log(error);
+            throw new Error( error.message );
+        }
+
+
+    }
 
 return (
 <div className={styles.container}>
@@ -28,14 +61,15 @@ return (
         <div className="grid w-full items-center gap-4">
             <div className={styles.name_div}>
                 <div>
-                    <Label className={styles.label} htmlFor="name" >NOMBRE</Label>
+                    <Label className={styles.label} htmlFor="name" >NOMBRE DEL EQUIPO</Label>
                     <Input id="name" placeholder="Nombre del equipo" className={ `${styles.input} ${styles.name}` } maxLength="18"/>
                 </div>
                 <div>
-                    <Label className={styles.label} htmlFor="name" >ABREVIATURA</Label>
+                    <Label className={styles.label} htmlFor="code" >ABREVIATURA</Label>
                     <Input
                         type="text"
-                        name="abreviatura"
+                        name="code"
+                        id="code"
                         placeholder="ABC"
                         maxLength="3"
                         pattern="[a-zA-Z0-9]*"
@@ -47,7 +81,7 @@ return (
             <div className="flex flex-col space-y-1.5">
                 <Label className={styles.label} htmlFor="year" >AÑO DE FUNDACIÓN</Label>
                 <Select>
-                    <SelectTrigger id="framework" className='w-20' >
+                    <SelectTrigger id="year" className='w-20' >
                     <SelectValue placeholder={new Date().getFullYear()} />
                     </SelectTrigger>
                     <SelectContent position="popper">
@@ -61,6 +95,15 @@ return (
                     <SelectItem value="nuxt">Nuxt.js</SelectItem>
                     </SelectContent>
                 </Select>
+            </div>
+            <div className={styles.name_div}>
+            <div className={`flex flex-col space-y-1.5 ${styles.div}`}>
+                <Label className={styles.label} htmlFor="badge" >ESCUDO</Label>
+                <Input type="file" id="badge" className={ `${styles.file_input}` } accept="image/png, image/jpeg, image/jpg" onChange={ uploadBadge }/>
+            </div>
+            <div className={ styles.badge_div }>
+              <Image src={badgeUrl} alt="" width="128" height="128"/>
+            </div>
             </div>
             <Button className={`dark text-white w-40 center m-auto`} variant="outline">
                 CREAR

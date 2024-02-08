@@ -30,9 +30,14 @@
 .name_div{
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 15px;
 }
 .name{
     width: 200px;
+}
+
+.file_input{
+    width: 300px;
+    color: #8888;
 }
