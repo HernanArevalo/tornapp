@@ -10,82 +10,82 @@
 }
 
 .loadership_ZHTYC {
-    display: flex;
-    position: relative;
-    width: 60px;
-    height: 60px;
-  }
+  display: flex;
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
 
-  .loadership_ZHTYC .div {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: #b3b3b3;
-    animation: loadership_ZHTYC_scale 1.9s infinite, loadership_ZHTYC_fade 1.9s infinite;
-    animation-timing-function: ease-in-out;
-  }
-  
-  .loadership_ZHTYC .div:nth-child(1) {
-      animation-delay: 0.00s;
-      top: 0px;
-      left: 0px;
-    }
+.loadership_ZHTYC .div {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #b3b3b3;
+  animation: loadership_ZHTYC_scale 1.9s infinite, loadership_ZHTYC_fade 1.9s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.loadership_ZHTYC .div:nth-child(1) {
+  animation-delay: 0.00s;
+  top: 0px;
+  left: 0px;
+}
 .loadership_ZHTYC .div:nth-child(2) {
-      animation-delay: 0.15s;
-      top: 0px;
-      left: 20px;
-    }
+  animation-delay: 0.15s;
+  top: 0px;
+  left: 20px;
+}
 .loadership_ZHTYC .div:nth-child(3) {
-      animation-delay: 0.30s;
-      top: 0px;
-      left: 40px;
-    }
+  animation-delay: 0.30s;
+  top: 0px;
+  left: 40px;
+}
 .loadership_ZHTYC .div:nth-child(4) {
-      animation-delay: 0.15s;
-      top: 20px;
-      left: 0px;
-    }
+  animation-delay: 0.15s;
+  top: 20px;
+  left: 0px;
+}
 .loadership_ZHTYC .div:nth-child(5) {
-      animation-delay: 0.30s;
-      top: 20px;
-      left: 20px;
-    }
+  animation-delay: 0.30s;
+  top: 20px;
+  left: 20px;
+}
 .loadership_ZHTYC .div:nth-child(6) {
-      animation-delay: 0.45s;
-      top: 20px;
-      left: 40px;
-    }
+  animation-delay: 0.45s;
+  top: 20px;
+  left: 40px;
+}
 .loadership_ZHTYC .div:nth-child(7) {
-      animation-delay: 0.30s;
-      top: 40px;
-      left: 0px;
-    }
+  animation-delay: 0.30s;
+  top: 40px;
+  left: 0px;
+}
 .loadership_ZHTYC .div:nth-child(8) {
-      animation-delay: 0.45s;
-      top: 40px;
-      left: 20px;
-    }
+  animation-delay: 0.45s;
+  top: 40px;
+  left: 20px;
+}
 .loadership_ZHTYC .div:nth-child(9) {
-      animation-delay: 0.60s;
-      top: 40px;
-      left: 40px;
-    }
+  animation-delay: 0.60s;
+  top: 40px;
+  left: 40px;
+}
 
-  @keyframes loadership_ZHTYC_scale {
-    0%, 47.36842105263158%, 100% {
-      transform: scale(1);
-    }
-    23.68421052631579% {
-      transform: scale(0);
-    }
+@keyframes loadership_ZHTYC_scale {
+  0%, 47.36842105263158%, 100% {
+    transform: scale(1);
   }
+  23.68421052631579% {
+    transform: scale(0);
+  }
+}
 
-  @keyframes loadership_ZHTYC_fade {
-    0%, 47.36842105263158%, 100% {
-      opacity: 1;
-    }
-    23.68421052631579% {
-      opacity: 1;
-    }
+@keyframes loadership_ZHTYC_fade {
+  0%, 47.36842105263158%, 100% {
+    opacity: 1;
   }
+  23.68421052631579% {
+    opacity: 1;
+  }
+}
 

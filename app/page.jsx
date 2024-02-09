@@ -1,5 +1,5 @@
 import styles from './home.module.css'
-import data from '../data/teams.data.json'
+import TeamsData from '../data/teams.data.json'
 import Image from 'next/image'
 
 export const metadata = {
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function Home () {
 
-  const team = data.teams[0]
+  const team = TeamsData.teams[0]
 
 
   return (

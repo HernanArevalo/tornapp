@@ -1,5 +1,5 @@
 import styles from './team.module.css'
-import { teams } from '../../../data/teams.data.json'
+import teamsData from '../../../data/teams.data.json'
 import Flag from 'react-world-flags'
 import Image from 'next/image';
 
@@ -15,7 +15,7 @@ const findScorer = (players) => {
 const FetchTeamData = () => {
 	return new Promise(resolve => {
 		setTimeout(() => {
-			let team = teams.find(element => element.id == "12345678");
+			let team = teamsData.teams.find(element => element.id == "12345678");
 			resolve(team);
 	  }, 0);
 	});

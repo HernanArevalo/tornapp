@@ -1,18 +1,10 @@
 'use client'
-import { Button, 
-         Form, 
-         Input, 
-         Label, 
-         Select, 
-         SelectContent, 
-         SelectItem, 
-         SelectTrigger, 
-         SelectValue 
-        } from "@/components/ui"
-
-import styles from './create_team.module.css';
 import { useState } from "react";
 import Image from "next/image";
+import { Button, Form, Input, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui"
+import CitiesData from '@/data/cities.data.json'
+
+import styles from './create_team.module.css';
 
 // export const metadata = {
 //     title: 'Crear Equipo - TornApp',
@@ -22,10 +14,14 @@ import Image from "next/image";
 export default function CreateTeamPage () {
 
     const [badgeUrl, setBadgeUrl] = useState("https://res.cloudinary.com/dabmixcta/image/upload/v1707365070/tornapp/wb13hhynskcyr5m0dgxb.png")
-
+    const [loadingFile, setLoadingFile] = useState(false)
+    const [selectedCountry, setSelectedCountry] = useState('');
+    const [selectedProvince, setSelectedProvince] = useState('');
+    const [selectedCity, setSelectedCity] = useState('');
 
     const uploadBadge = async ({target}) =>{
         if( target.files === 0 ) return;
+        setBadgeUrl("https://res.cloudinary.com/dabmixcta/image/upload/v1707438018/tornapp/nc2v7xjmikjkxymlg7ad.png")
 
         const cloudUrl = 'https://api.cloudinary.com/v1_1/dabmixcta/image/upload';
 
@@ -40,19 +36,31 @@ export default function CreateTeamPage () {
                 body: formData
             });
 
-
             if ( !resp.ok ) throw new Error('No se pudo subir imagen')
             const cloudResp = await resp.json();
 
             setBadgeUrl( cloudResp.secure_url )
 
         } catch (error) {
+            setBadgeUrl("https://res.cloudinary.com/dabmixcta/image/upload/v1707365070/tornapp/wb13hhynskcyr5m0dgxb.png")
             console.log(error);
             throw new Error( error.message );
         }
-
-
     }
+
+    const handleCountryChange = (country) => {
+        setSelectedCountry(country);
+        setSelectedProvince('')
+    };
+
+    const handleProvinceChange = (province) => {
+        setSelectedProvince(province);
+    };
+    const handleCityChange = (city) => {
+        console.log(city);
+        setSelectedCity(city)
+    };
+
 
 return (
 <div className={styles.container}>
@@ -90,20 +98,67 @@ return (
                     .map((year, index) => (
                         <SelectItem value={year} key={year}>{year}</SelectItem>
                     ))}
-                    <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                    <SelectItem value="astro">Astro</SelectItem>
-                    <SelectItem value="nuxt">Nuxt.js</SelectItem>
                     </SelectContent>
                 </Select>
             </div>
-            <div className={styles.name_div}>
-            <div className={`flex flex-col space-y-1.5 ${styles.div}`}>
-                <Label className={styles.label} htmlFor="badge" >ESCUDO</Label>
-                <Input type="file" id="badge" className={ `${styles.file_input}` } accept="image/png, image/jpeg, image/jpg" onChange={ uploadBadge }/>
+            <div className={styles.badge_div}>
+                <div className={`flex flex-col space-y-1.5 ${styles.div}`}>
+                    <Label className={styles.label} htmlFor="badge" >ESCUDO</Label>
+                    <Input type="file" 
+                           id="badge" 
+                           className={ `${styles.file_input}` } 
+                           accept="image/png, image/jpeg, image/jpg" 
+                           onChange={ uploadBadge }/>
+                    <span className="text-white text-xs leading-3">Resolución recomendada: 128x128px</span>
+                    <span className="text-white text-xs leading-3">Archivo recomendado: png</span>
+                </div>
+                <div className={ styles.badge }>
+                    { loadingFile?
+                        <Image src={badgeUrl} alt="" width="128" height="128"/>
+                        :
+                        <Image src={badgeUrl} alt="" width="128" height="128"/>
+                        
+                    }
+                </div>
             </div>
-            <div className={ styles.badge_div }>
-              <Image src={badgeUrl} alt="" width="128" height="128"/>
-            </div>
+            <div className="flex flex-col space-y-1.5">
+                <Label className={styles.label} htmlFor="country">PAÍS</Label>
+                <Select onValueChange={handleCountryChange}>
+                    <SelectTrigger id="country" name="country" className='w-36' value={selectedCountry} >
+                        <SelectValue placeholder="-" />
+                    </SelectTrigger>
+                    <SelectContent position="popper">
+                    {Object.keys(CitiesData).map((year, index) => (
+                        <SelectItem value={year} key={year}>{year}</SelectItem>
+                    ))}
+                    </SelectContent>
+                </Select>                            
+
+                <Label className={styles.label} htmlFor="province">PROVINCIA</Label>
+                <Select onValueChange={handleProvinceChange}>
+                    <SelectTrigger id="province" name="province" className='w-36' value={selectedProvince}>
+                        <SelectValue placeholder="-" />
+                    </SelectTrigger>
+                    <SelectContent position="popper">
+                        {selectedCountry && CitiesData[selectedCountry] && Object.keys(CitiesData[selectedCountry]).map((province) => (
+                            <SelectItem value={province} key={province}>{province}</SelectItem>
+                        ))}
+                    </SelectContent>
+                </Select>                        
+
+                <Label className={styles.label} htmlFor="city">CIUDAD</Label>
+                <Select onValueChange={handleCityChange}>
+                    <SelectTrigger id="city" name="city" className='w-36' value={selectedCity}>
+                        <SelectValue placeholder="-" />
+                    </SelectTrigger>
+                    <SelectContent position="popper">
+                        {selectedCountry && selectedProvince && CitiesData[selectedCountry][selectedProvince] && CitiesData[selectedCountry][selectedProvince].map((city) => (
+                            <SelectItem value={city} key={city}>{city}</SelectItem>
+                        ))}
+                    </SelectContent>
+                </Select>                            
+
+
             </div>
             <Button className={`dark text-white w-40 center m-auto`} variant="outline">
                 CREAR
