@@ -2,7 +2,7 @@ import { Kanit } from 'next/font/google'
 import '@/styles/globals.css'
 import Navbar from 'components/Navbar'
 
-const inter = Kanit({ 
+const kanit = Kanit({ 
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayou ({ children }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={kanit.className}>
         <main>
           <Navbar />
           {children}
