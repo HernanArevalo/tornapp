@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button, Form, Input, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui"
 import CitiesData from '@/data/cities.data.json'
 
+import '@/styles/tailwind.css'
 import styles from './create_team.module.css';
 
 // export const metadata = {
