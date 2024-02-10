@@ -2,10 +2,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Button, Form, Input, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui"
+
 import CitiesData from '@/data/cities.data.json'
 
 import '@/styles/tailwind.css'
 import styles from './create_team.module.css';
+import { UploadCloud } from "lucide-react";
 
 // export const metadata = {
 //     title: 'Crear Equipo - TornApp',
@@ -21,8 +23,8 @@ export default function CreateTeamPage () {
     const [selectedCity, setSelectedCity] = useState('');
 
     const uploadBadge = async ({target}) =>{
-        if( target.files === 0 ) return;
-        setBadgeUrl("https://res.cloudinary.com/dabmixcta/image/upload/v1707438018/tornapp/nc2v7xjmikjkxymlg7ad.png")
+        if(target.files.length == 0) return;
+        setLoadingFile(true)
 
         const cloudUrl = 'https://api.cloudinary.com/v1_1/dabmixcta/image/upload';
 
@@ -41,12 +43,11 @@ export default function CreateTeamPage () {
             const cloudResp = await resp.json();
 
             setBadgeUrl( cloudResp.secure_url )
-
         } catch (error) {
-            setBadgeUrl("https://res.cloudinary.com/dabmixcta/image/upload/v1707365070/tornapp/wb13hhynskcyr5m0dgxb.png")
             console.log(error);
             throw new Error( error.message );
         }
+        setLoadingFile(false)
     }
 
     const handleCountryChange = (country) => {
@@ -62,6 +63,11 @@ export default function CreateTeamPage () {
         setSelectedCity(city)
     };
 
+    const uploadNewBadge = ({target}) => {
+        if(target.files.length == 0) return;
+
+        console.log(target.files);
+    }
 
 return (
 <div className={styles.container}>
@@ -88,7 +94,7 @@ return (
                 </div>
             </div>
             <div className="flex flex-col space-y-1.5">
-                <Label className={styles.label} htmlFor="year" >AÑO DE FUNDACIÓN</Label>
+                <Label className={styles.label} htmlFor="year">AÑO DE FUNDACIÓN</Label>
                 <Select>
                     <SelectTrigger id="year" className='w-20' >
                     <SelectValue placeholder={new Date().getFullYear()} />
@@ -103,7 +109,7 @@ return (
                 </Select>
             </div>
             <div className={styles.badge_div}>
-                <div className={`flex flex-col space-y-1.5 ${styles.div}`}>
+                {/* <div className={`flex flex-col space-y-1.5 ${styles.div}`}>
                     <Label className={styles.label} htmlFor="badge" >ESCUDO</Label>
                     <Input type="file" 
                            id="badge" 
@@ -112,13 +118,23 @@ return (
                            onChange={ uploadBadge }/>
                     <span className="text-white text-xs leading-3">Resolución recomendada: 128x128px</span>
                     <span className="text-white text-xs leading-3">Archivo recomendado: png</span>
+                </div> */}
+                <div className={`flex flex-col space-y-1.5 ${styles.div}`}>
+                    <Label className={styles.label} htmlFor="badge" >ESCUDO</Label>
+                    <input type="file" id="badge" style={{display:'none'}} accept="image/png, image/jpeg, image/jpg" 
+                           onChange={ uploadNewBadge }/>
+                    
+                    <UploadCloud color="white" size={32} />
+                    <span className="text-white text-xs leading-3">Resolución recomendada: 128x128px</span>
+                    <span className="text-white text-xs leading-3">Archivo recomendado: png</span>
                 </div>
                 <div className={ styles.badge }>
                     { loadingFile?
-                        <Image src={badgeUrl} alt="" width="128" height="128"/>
+                        <div className={ styles.loader_div }>
+                            <div class={styles.loadership_QIDHR}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                        </div>
                         :
                         <Image src={badgeUrl} alt="" width="128" height="128"/>
-                        
                     }
                 </div>
             </div>
