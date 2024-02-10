@@ -124,7 +124,7 @@ return (
                     <input type="file" id="badge" style={{display:'none'}} accept="image/png, image/jpeg, image/jpg" 
                            onChange={ uploadNewBadge }/>
                     
-                    <UploadCloud color="white" size={32} />
+                    <UploadCloud color="white" size={32} strokeWidth={3} />
                     <span className="text-white text-xs leading-3">Resolución recomendada: 128x128px</span>
                     <span className="text-white text-xs leading-3">Archivo recomendado: png</span>
                 </div>
