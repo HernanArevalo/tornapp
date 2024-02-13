@@ -20,7 +20,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background: #b3b3b3;
+  background: #5e5e5e;
   animation: loadership_ZHTYC_scale 1.9s infinite, loadership_ZHTYC_fade 1.9s infinite;
   animation-timing-function: ease-in-out;
 }
