@@ -9,6 +9,7 @@
     flex-direction: column;
     padding: 10px;
     gap: 5px;
+    max-width: 100%;
     
 }
 
@@ -50,16 +51,30 @@
 
 /* * Badge Input */
 
-.upload_badge{
+.badge_div{
+  width: 100%;
+  max-width: 100%;
+}
+.badge_div > :first-child{
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  width: fit-content;
+  max-width: calc(100% - 150px);
+
+}
+.upload_badge{
   gap: 8px;
   color: white;
   background-color: #8888;
   padding: 5px;
-  width: fit-content;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+
 }
 .upload_badge_text{
   font-size: 12px;
@@ -71,7 +86,9 @@
   font-size: 12px;
   line-height: 13px;
   margin: 0 !important;
-
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
 }
 
 .upload_badge_file{
@@ -89,9 +106,8 @@
     border: 4px  black;
     box-sizing: content-box;   
     background-color: rgba(0, 0, 0, 0.2);
-    height: 100%;
-    max-width: 120px;
-    max-height: 120px;
+    width: 120px;
+    height: 120px;
 }
 
 /* * Loader */

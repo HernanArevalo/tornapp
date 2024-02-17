@@ -142,7 +142,7 @@ return (
             </div>
 
             <div className={styles.badge_div}>
-                <div className={`flex flex-col space-y-1.5 ${styles.div}`}>
+                <div>
                     <Label className={styles.label} htmlFor="badge" >ESCUDO</Label>
                     <input type="file" id="badge" style={{display:'none'}} accept="image/png, image/jpeg, image/jpg" 
                            onChange={ uploadNewBadge }
